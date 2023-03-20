@@ -1,13 +1,11 @@
-footer {
-    position: absolute;
-    width: 100%;
-}
-
 .site-footer {
     background-color: var(--black);
-
     height: 15rem;
    
+}
+
+.footer-apps, .footer-info{
+    background-color: var(--black);
 }
 
 .footer-info, .footer-apps {
