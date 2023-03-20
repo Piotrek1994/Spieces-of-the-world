@@ -2,6 +2,7 @@
 	--light-pink: #f7f0e6;
 	--light-gray: #808080;
 	--orange: #f15d09;
+	--black: black;
 }
 
 .container {
@@ -11,6 +12,7 @@
 }
 
 body {
+	
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 0.6px;
 }
