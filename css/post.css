@@ -60,3 +60,7 @@ aside {
     color: var(--orange);
     text-decoration: none;
 }
+
+.generic-content {
+    margin: 2rem 0rem 5rem 0rem;
+}
