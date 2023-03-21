@@ -10,7 +10,7 @@ while(have_posts()){
 </div>
 
 <div class="post-container">
-    <div class="post-title">
+    <div class="post-header">
         <p>BLOG</p>
         <?php if (!is_home()): ?>
         <div class="breadcrumb">
@@ -19,10 +19,10 @@ while(have_posts()){
         <?php endif; ?>
     </div>
     <div class="post-content">
-        <div><?php the_title() ?>
-            <span class="metabox__main">Opublikowany przez
+        <div class="post-content-title"><?php the_title() ?>
+            <div class="post-content-subtitle">Opublikowany przez
                 <?php the_author_posts_link(); ?> w <?php the_time('n.j.y'); ?> w
-                <?php echo get_the_category_list(', ') ?></span>
+                <?php echo get_the_category_list(', ') ?></div>
 
         </div>
         <?php the_post_thumbnail('large_size'); ?>

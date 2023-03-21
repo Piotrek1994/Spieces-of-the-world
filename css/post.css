@@ -3,13 +3,13 @@
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 100px auto;
 	width: 100%;
-	max-width: 1140px;
+	max-width: 1400px;
 	margin: 130px auto 0 auto;
 }
-.post-title {
+.post-header {
 	grid-column: 1 / -1;
 	grid-row: 1 / 2;
-    text-align: center;
+	text-align: center;
 }
 
 .post-content {
@@ -22,26 +22,41 @@ aside {
 }
 
 .breadcrumb {
-    color: var(--black);
-    font-weight: 400;
-    font-size: 13px;
+	color: var(--black);
+	font-weight: 400;
+	font-size: 13px;
 }
 
 .breadcrumb a {
-    text-decoration: none;
-    color: var(--black);
-    transition: color .3s ;
-
+	text-decoration: none;
+	color: var(--black);
+	transition: color 0.3s;
 }
 
 .breadcrumb a:hover {
-    color: var(--orange)
+	color: var(--orange);
 }
 
-.post-title p {
-    margin-bottom: 0.7rem;
-    font-size: 20px;
-    color: var(--black);
-    font-weight: bold;
+.post-header p {
+	margin-bottom: 0.7rem;
+	font-size: 20px;
+	color: var(--black);
+	font-weight: bold;
 }
 
+.post-content-title {
+	font-weight: bold;
+	font-size: 18px;
+	color: var(--black);
+}
+
+.post-content-subtitle {
+    margin: 0.4rem 0rem 1.5rem 0rem;
+    font-size: 14px;
+    color: var(--orange);
+}
+
+.post-content-subtitle a {
+    color: var(--orange);
+    text-decoration: none;
+}

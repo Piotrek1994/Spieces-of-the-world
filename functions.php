@@ -151,6 +151,7 @@ function spieces_scripts() {
 	wp_enqueue_style( 'custom-style6', get_template_directory_uri(). '/css/footer.css');
 	wp_enqueue_style( 'custom-style7', get_template_directory_uri(). '/css/post.css');
 	wp_enqueue_style( 'custom-style8', get_template_directory_uri(). '/css/page.css');
+	wp_enqueue_style( 'custom-style9', get_template_directory_uri(). '/css/sidebar.css');
 	wp_style_add_data( 'spieces-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'spieces-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
