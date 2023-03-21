@@ -167,6 +167,15 @@ body {
 	color: var(--orange);
 }
 
+.header-bottom::after {
+	content: '';
+    position: absolute;
+	bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 
 
 

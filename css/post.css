@@ -1,8 +1,47 @@
 .post-container {
-    
-    margin: 100px auto;
-    width: 100%;
-	max-width: 1170px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 100px auto;
+	width: 100%;
+	max-width: 1140px;
+	margin: 130px auto 0 auto;
+}
+.post-title {
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+    text-align: center;
+}
 
+.post-content {
+	grid-column: 1 / 9;
+	grid-row: 2 / 3;
+}
+aside {
+	grid-column: 10 / -1;
+	grid-row: 2 / 3;
+}
+
+.breadcrumb {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--black);
+    transition: color .3s ;
+
+}
+
+.breadcrumb a:hover {
+    color: var(--orange)
+}
+
+.post-title p {
+    margin-bottom: 0.7rem;
+    font-size: 20px;
+    color: var(--black);
+    font-weight: bold;
 }
 
