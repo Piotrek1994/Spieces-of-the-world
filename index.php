@@ -3,6 +3,6 @@
 get_header(); ?>
 
 
-<h1>INDEX</h1>
+<h1>eokasepoe</h1>
 
 <?php get_footer()?>
