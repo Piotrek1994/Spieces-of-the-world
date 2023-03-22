@@ -35,26 +35,12 @@
                     </div>
                 </a>
                 <div class="header-nav-bottom">
-                    <ul class="menu-header-bottom-menu">
-
-                        <li <?php if (is_page('kategorie')) echo 'class="active-page-color"' ?>><a
-                                href="<?php echo site_url('/kategorie') ?>">Kategorie</a></li>
-
-                        <li <?php if (is_page('przyprawy-swiata')) echo 'class="active-page-color"' ?>><a
-                                href=" <?php echo site_url('/przyprawy-swiata') ?>">Przyprawy świata</a></li>
-
-                        <li <?php if (is_page('zdrowa-zywnosc')) echo 'class="active-page-color"' ?>><a
-                                href="<?php echo site_url('/zdrowa-zywnosc') ?>">Zdrowa żywność</a></li>
-
-                        <li <?php if (is_page('zielarnia')) echo 'class="active-page-color"' ?>><a
-                                href="<?php echo site_url('/zielarnia') ?>">Zielarnia</a></li>
-
-                        <li <?php if (is_page('herbaty')) echo 'class="active-page-color"' ?>><a
-                                href="<?php echo site_url('/herbaty') ?>">Herbaty</a></li>
-
-                        <li <?php if (is_page('kuchnie-swiata')) echo 'class="active-page-color"' ?>><a
-                                href="<?php echo site_url('/kuchnie-swiata') ?>">Kuchnie świata</a></li>
-                    </ul>
+                    <nav>
+                        <?php wp_nav_menu(array(
+                        'theme_location' => 'headerMenuLocation',
+                        'menu_class' => 'menu-header-bottom-menu',
+                    )); ?>
+                    </nav>
                 </div>
 
 

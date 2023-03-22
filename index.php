@@ -2,6 +2,7 @@
 
 get_header(); ?>
 
-<h1>welcome on our blog</h1>
+
+<h1>INDEX</h1>
 
 <?php get_footer()?>

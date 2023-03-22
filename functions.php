@@ -212,3 +212,28 @@ function get_breadcrumb() {
         echo '</em>"';
     }
 }
+
+
+function cwpai_create_post_type() {
+    register_post_type('herbaty', array(
+		'public' => true,
+		'show_in_rest' => true,
+		'labels' => array(
+		  'name' => 'Herbaty',
+		  'add_new_item' => 'Add New herbaty',
+		  'edit_item' => 'Edit herbaty',
+		  'all_items' => 'All herbaty',
+		  'singular_name' => 'herbaty'
+		),
+		'menu_icon' => 'dashicons-calendar'
+	  ));
+}
+add_action('init', 'cwpai_create_post_type');
+
+function my_menu(){
+	register_nav_menu('headerMenuLocation', 'Header Menu Location');
+	add_theme_support('title_tag');	
+
+}
+
+add_action('after_setup_theme', 'my_menu');
