@@ -19,12 +19,12 @@ get_header();
         </div>
         <?php endif; ?>
     </div>
-	
+
 
     <div class="archive-container-post">
-	<?php if ( have_posts() ) : ?>
+        <?php if ( have_posts() ) : ?>
 
-<?php
+        <?php
 		/* Start the Loop */
 		while ( have_posts() ) :
 			the_post();
@@ -38,7 +38,12 @@ get_header();
 
 		endwhile;
 
-		the_posts_navigation();
+		the_posts_navigation( array(
+			'prev_text' =>  '<i class="fa-sharp fa-solid fa-circle-chevron-left fa-shake fa-2xl" style="color: #f15d09;"></i>', 'text-domain',
+			'next_text' => '<i class="fa-sharp fa-solid fa-circle-chevron-right fa-shake fa-2xl" style="color: #f15d09;"></i>', 'text-domain' ,
+			'show_page_number' => true,
+			
+		)	);
 	
 	else :
 	
@@ -46,9 +51,10 @@ get_header();
 
 	endif;
 	?>
-	</div>
 
-<?php get_sidebar(); ?>
+    </div>
+
+    <?php get_sidebar(); ?>
 </div>
 
 <?php

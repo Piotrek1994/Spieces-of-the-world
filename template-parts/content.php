@@ -10,11 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-thumbnail"><?php the_post_thumbnail()?></div>
 
-<div class="grid">
-		<header class="entry-header">
-		<?php
+
+
+
+    <div class="entry-thumbnail"><?php the_post_thumbnail('medium_size') ?></div>
+
+
+
+    <div class="grid">
+        <header class="entry-header">
+            <?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
@@ -23,17 +29,17 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
+            <div class="entry-meta">
+                <?php
 				spieces_posted_on();
 				spieces_posted_by();
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-		</header><!-- .entry-header -->
+            </div><!-- .entry-meta -->
+            <?php endif; ?>
+        </header><!-- .entry-header -->
 
-	<div class="entry-content">
-    <?php
+        <div class="entry-content">
+            <?php
     $content = get_the_content();
     $trimmed_content = wp_trim_words($content, 50, '...');
     
@@ -46,12 +52,12 @@
         )
     );
     ?>
-	</div><!-- .entry-content -->
+        </div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php spieces_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</div>
+        <footer class="entry-footer">
+            <?php spieces_entry_footer(); ?>
+        </footer><!-- .entry-footer -->
+    </div>
 
 
 </article><!-- #post-<?php the_ID(); ?> -->
