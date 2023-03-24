@@ -24,6 +24,11 @@ gap: 2rem;
 grid-column: 1/-1;
 }
 
+.search-container header h1 {
+    color: var(--black);
+    font-weight: 600;
+}
+
 .search-container article header {
     margin-right: auto;
 }
