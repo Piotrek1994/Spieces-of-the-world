@@ -54,7 +54,7 @@ get_header();
 </div>
 
 <section class="category-section container">
-    <h2 class="category-header">NAJLEPSZE PRZEPISY</h2>
+    <h2 class="category-header">OSTATNIE PRZEPISY</h2>
     <div class="category-container">
         <?php
 $args = array(
@@ -80,10 +80,12 @@ if ( $recent_posts->have_posts() ) :
 
         <div class="recipe-card">
 
-            <a href="<?php the_permalink(); ?>">
-                <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
-                <h4 class="post-title"><?php the_title(); ?></h4>
+
+            <div class="recipe-card-image"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" /></div>
+            <a href="<?php the_permalink() ?>">
+                <h4 class="post-title"><?php echo wp_trim_words(get_the_title(), 5); ?></h4>
             </a>
+
 
         </div>
 
@@ -121,7 +123,7 @@ if ($posts->have_posts()) {
             <?php endif; ?>
 
             <div class="blog-card-content">
-                <p class="blog-card-date"><?php echo get_the_date(); ?></p>
+                <p class="blog-card-date"><?php echo get_the_date('d/m/Y'); ?></p>
                 <a href="<?php the_permalink() ?>">
                     <div class="blog-card-title"><?php echo wp_trim_words(get_the_title(), 5); ?></div>
                 </a>

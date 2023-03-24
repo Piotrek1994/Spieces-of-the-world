@@ -51,6 +51,11 @@ aside {
 	color: var(--black);
 }
 
+.post-content img {
+	height: auto;
+  max-width: 100%;
+}
+
 .post-content-subtitle {
     margin: 0.4rem 0rem 1.5rem 0rem;
     font-size: 14px;

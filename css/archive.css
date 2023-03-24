@@ -51,6 +51,10 @@ margin-top: 20px;
 }
 
 .entry-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
     grid-column: 1/7;
 }
 

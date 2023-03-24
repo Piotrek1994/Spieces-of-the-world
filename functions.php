@@ -143,16 +143,16 @@ add_action( 'widgets_init', 'spieces_widgets_init' );
 function spieces_scripts() {
 	wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap');
 	wp_enqueue_style( 'spieces-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'custom-style', get_template_directory_uri(). '/css/home-page.css');
-	wp_enqueue_style( 'custom-style2', get_template_directory_uri(). '/css/page-banner.css');
-	wp_enqueue_style( 'custom-style3', get_template_directory_uri(). '/css/home-page.css');
-	wp_enqueue_style( 'custom-style4', get_template_directory_uri(). '/css/page-card.css');
-	wp_enqueue_style( 'custom-style5', get_template_directory_uri(). '/css/blog-card.css');
-	wp_enqueue_style( 'custom-style6', get_template_directory_uri(). '/css/footer.css');
-	wp_enqueue_style( 'custom-style7', get_template_directory_uri(). '/css/post.css');
-	wp_enqueue_style( 'custom-style8', get_template_directory_uri(). '/css/page.css');
-	wp_enqueue_style( 'custom-style9', get_template_directory_uri(). '/css/sidebar.css');
-	wp_enqueue_style( 'custom-style10', get_template_directory_uri(). '/css/archive.css');
+	wp_enqueue_style( 'home-page', get_template_directory_uri(). '/css/home-page.css');
+	wp_enqueue_style( 'page-banner', get_template_directory_uri(). '/css/page-banner.css');
+	wp_enqueue_style( 'page-card', get_template_directory_uri(). '/css/page-card.css');
+	wp_enqueue_style( 'blog-card', get_template_directory_uri(). '/css/blog-card.css');
+	wp_enqueue_style( 'footer', get_template_directory_uri(). '/css/footer.css');
+	wp_enqueue_style( 'post', get_template_directory_uri(). '/css/post.css');
+	wp_enqueue_style( 'page', get_template_directory_uri(). '/css/page.css');
+	wp_enqueue_style( 'sidebar', get_template_directory_uri(). '/css/sidebar.css');
+	wp_enqueue_style( 'archive', get_template_directory_uri(). '/css/archive.css');
+	wp_enqueue_style( 'search', get_template_directory_uri(). '/css/search.css');
 	wp_style_add_data( 'spieces-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'spieces-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

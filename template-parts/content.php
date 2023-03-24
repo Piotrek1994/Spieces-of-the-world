@@ -14,8 +14,15 @@
 
 
 
-    <div class="entry-thumbnail"><?php the_post_thumbnail('medium_size') ?></div>
-
+    <div class="entry-thumbnail">
+        <?php 
+        if ( has_post_thumbnail() ) {
+            the_post_thumbnail('medium_size');
+        } else {
+            echo '<p>Brak zdjęcia :(</p>';
+        }
+    ?>
+    </div>
 
 
     <div class="grid">
