@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main search-container">
 
     <?php if ( have_posts() ) : ?>
 
@@ -18,7 +18,7 @@ get_header();
         <h1 class="page-title">
             <?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'spieces' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Wyniki wyszukiwania dla: %s', 'spieces' ), '<span>' . get_search_query() . '</span>' );
 					?>
         </h1>
     </header><!-- .page-header -->
@@ -44,10 +44,10 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+		get_sidebar();
 		?>
 
 </main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -1,0 +1,33 @@
+.search-container {
+    display: grid;
+	grid-template-columns: repeat(12, 1fr);
+gap: 2rem;
+	max-width: 1400px;
+	margin: 130px auto 0 auto;
+}
+
+.search-container img {
+    height: auto;
+    max-width: 100%;
+}
+
+.search-container article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 9;
+   
+}
+
+.search-container header {
+grid-column: 1/-1;
+}
+
+.search-container article header {
+    margin-right: auto;
+}
+
+.search-container aside {
+    grid-column: 9 / -1;
+}
