@@ -96,8 +96,8 @@ function spieces_setup() {
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 350,
+			'width'       => 350,
 			'flex-width'  => true,
 			'flex-height' => true,
 		)

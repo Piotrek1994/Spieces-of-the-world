@@ -21,31 +21,30 @@
     <?php wp_head(); ?>
 </head>
 
+
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+    <div id="page" class="site">
+        <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'piotr' ); ?></a>
+
+        <header id="masthead" class="site-header">
 
 
-    <header id="masthead" class="site-header">
-
-        <div class="site-header-main">
-            <div class="header-bottom">
+            <nav id="site-navigation" class="main-navigation">
                 <a href="<?php echo site_url() ?>">
                     <div class="header-bottom-logo"
                         style="background-image: url(<?php echo get_theme_file_uri('/assets/logo.png') ?>)">
                     </div>
                 </a>
-                <div class="header-nav-bottom">
-                    <nav>
-                        <?php wp_nav_menu(array(
-                        'theme_location' => 'headerMenuLocation',
-                        'menu_class' => 'menu-header-bottom-menu',
-                    )); ?>
-                    </nav>
-                </div>
-
-
-
-
-
-
-    </header><!-- #masthead -->
+                <button class="menu-toggle" aria-controls="primary-menu"
+                    aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'piotr' ); ?></button>
+                <?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+            </nav><!-- #site-navigation -->
+        </header><!-- #masthead -->
