@@ -40,6 +40,7 @@ body {
  .menu-main-menu-container {
 	display: flex;
 	align-items: center;
+	padding-left: 1rem;
 	
 	width: 900px;
 }
@@ -53,19 +54,8 @@ body {
 
 
 
-.header-bottom {
-	background-color: white;
-	text-align: center;
-	position: fixed;
-	display: inline-block;
-	vertical-align: top;
-	width: 100%;
-	padding: 0;
-	z-index: 5;
-	width: 100%;
-}
 
-.header-bottom-logo {
+.header-logo {
 	position: relative;
 	margin: 0.5rem 0rem 0.5rem 0rem;
 	width: 90px;
@@ -75,17 +65,12 @@ body {
 }
 
 
-
-
-
-
-
-
 .menu li a {
 	text-decoration: none;
 	color: black;
 	text-transform: Uppercase;
 	font-weight: 600;
+	font-size: 18px;
 	transition: color 0.3s;
 }
 
@@ -100,3 +85,32 @@ body {
 
 
 
+@media (min-width: 768px) { 
+	.main-navigation .menu-toggle {
+		display: none;
+		
+		
+	  }
+	
+	  .main-navigation ul {
+		display: flex;
+	
+	  }
+
+ }
+
+ @media (max-width: 768px) {
+
+	.header-logo{
+		display: none;
+	}
+	.toggled .menu-main-menu-container .menu{
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		justify-content: center;
+		margin-right: 1rem;
+	}
+	
+
+  }

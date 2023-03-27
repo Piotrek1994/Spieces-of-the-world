@@ -257,7 +257,7 @@ img {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-button,
+
 input,
 optgroup,
 select,
@@ -272,7 +272,7 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button,
+
 input {
   overflow: visible;
 }
@@ -732,15 +732,7 @@ textarea {
   display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
 
-  .main-navigation ul {
-    display: flex;
-  }
-}
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,

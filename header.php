@@ -32,12 +32,17 @@
 
             <nav id="site-navigation" class="main-navigation">
                 <a href="<?php echo site_url() ?>">
-                    <div class="header-bottom-logo"
+                    <div class="header-logo"
                         style="background-image: url(<?php echo get_theme_file_uri('/assets/logo2.png') ?>)">
                     </div>
                 </a>
-                <button class="menu-toggle" aria-controls="primary-menu"
-                    aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'piotr' ); ?></button>
+                <button class="menu-toggle hamburger hamburger--collapse" aria-controls="primary-menu"
+                    aria-expanded="false" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+
+                </button>
                 <?php
 			wp_nav_menu(
 				array(

@@ -37,8 +37,11 @@
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
+			button.classList.remove('is-active');
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
+			
+			button.classList.add('is-active');
 		}
 	} );
 
