@@ -1,41 +1,45 @@
 .page-banner {
+	margin-top: 100px;
 	position: relative;
 	background-size: cover;
 	width: 100%;
-	height: 800px;
+	height: 600px;
+
 	z-index: 20;
 	background-position: center;
 	z-index: 1;
 }
 
 
-
-.page-banner::before {
+.overlay {
 	position: absolute;
-	content: '';
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
-}
+	background: rgba(0, 0, 0, 0.5); /* Przyciemnienie banera, możesz zmienić wartość 0.5 na inną */
+	z-index: 1; /* Warstwa przyciemniająca znajduje się pomiędzy tekstem a banerem */
+  }
+
 
 
 .banner-container {
-	position: absolute;
-	top: 50%;
-	left: 32%;
-	height: 20rem;
-	width: 44rem;
-	transform: translate(-50%, -50%);
+	height: auto;
 	color: white;
 	z-index: 200;
 }
 
-.banner-title {
-	font-weight: 800;
+.banner-container-content{
+	position: absolute;
+	padding: 5rem;
+	max-width: 1000px;
+  color: #fff; 
+  z-index: 2; 
 }
 
 .banner-title a {
 	text-decoration: none;
+	font-weight: bold;
 	color: white;
 }
 

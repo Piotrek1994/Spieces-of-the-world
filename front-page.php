@@ -22,8 +22,9 @@ get_header();
 <div class="page-banner" style="background-image: url(<?php echo get_theme_file_uri('./assets/background.jpg') ?>)">
 
     <div class="banner-container">
+        <div class="overlay">
 
-        <?php
+            <?php
                 $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => 1,
@@ -39,16 +40,17 @@ get_header();
                 $title = get_the_title();
                 $category = get_the_category_list(', ');
                 $content = wp_trim_words( get_the_content(), 100 );
+                echo '<div class="banner-container-content">';
                 echo '<h1 class="banner-title"><a href="' . get_permalink() . '">' . $title . '</a></h1>';
                 echo '<h2 class="banner-recipe-category">Kategoria: ' . $category . '<h2>';
-                echo '<div class="banner-recipe-content">' . $content . '</div>';
+                echo '<div class="banner-recipe-content">' . $content . '</div></div>';
                 
                 }
                 }
                 wp_reset_postdata();
                 ?>
 
-
+        </div>
 
     </div>
 </div>
