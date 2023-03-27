@@ -29,6 +29,7 @@ body {
 .main-navigation {
 	width: 100%;
 	max-width: 1170px;
+	padding: 0px 16px 0px 16px;
 	display: flex;
 	justify-content: space-between;
 	margin-right: auto;
@@ -39,13 +40,18 @@ body {
  .menu-main-menu-container {
 	display: flex;
 	align-items: center;
+	
+	width: 900px;
 }
 
 .menu {
 	display: flex;
 	justify-content: space-between;
-	width: 800px;
+	width: 100%;
 }
+
+
+
 
 .header-bottom {
 	background-color: white;
@@ -61,8 +67,9 @@ body {
 
 .header-bottom-logo {
 	position: relative;
-	width: 100px;
-	height: 100px;
+	margin: 0.5rem 0rem 0.5rem 0rem;
+	width: 90px;
+	height: 90px;
 	z-index: 10;
 	background-size: cover;
 }

@@ -33,7 +33,7 @@
             <nav id="site-navigation" class="main-navigation">
                 <a href="<?php echo site_url() ?>">
                     <div class="header-bottom-logo"
-                        style="background-image: url(<?php echo get_theme_file_uri('/assets/logo.png') ?>)">
+                        style="background-image: url(<?php echo get_theme_file_uri('/assets/logo2.png') ?>)">
                     </div>
                 </a>
                 <button class="menu-toggle" aria-controls="primary-menu"
