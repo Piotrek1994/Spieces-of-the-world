@@ -36,13 +36,6 @@
                         style="background-image: url(<?php echo get_theme_file_uri('/assets/logo2.png') ?>)">
                     </div>
                 </a>
-                <button class="menu-toggle hamburger hamburger--collapse" aria-controls="primary-menu"
-                    aria-expanded="false" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-
-                </button>
                 <?php
 			wp_nav_menu(
 				array(
@@ -52,6 +45,14 @@
 				)
 			);
 			?>
+                <button class="menu-toggle hamburger hamburger--collapse" aria-controls="primary-menu"
+                    aria-expanded="false" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+
+                </button>
+
 
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->

@@ -3,8 +3,8 @@
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 100px auto;
 	width: 100%;
-	max-width: 1400px;
-	margin: 130px auto 0 auto;
+	max-width: 1170px;
+	margin: 100px auto 0 auto;
 }
 .post-header {
 	grid-column: 1 / -1;
