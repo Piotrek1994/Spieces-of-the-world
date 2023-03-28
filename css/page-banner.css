@@ -13,6 +13,9 @@
 
 .overlay {
 	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -30,9 +33,10 @@
 }
 
 .banner-container-content{
-	position: absolute;
-	padding: 5rem;
-	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1170px;
+	padding: 0px 16px 0px 16px;
   color: #fff; 
   z-index: 2; 
 }

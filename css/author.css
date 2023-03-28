@@ -1,0 +1,52 @@
+.archive-user {
+    grid-column: 1 / -1;
+    
+}
+
+.author-info img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.author-social-links {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.author-social-links a {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+
+
+
+.author-info {
+    height: 100%;
+    padding: 1rem 3rem 3rem 3rem;
+    background: rgb(241,93,9);
+    background: linear-gradient(0deg, rgba(241,93,9,0.1) 0%, rgba(255,255,255,0) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.author-social-links {
+    display: flex;
+}
+
+.author-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding: 0rem 4rem 0rem 4rem;
+}
+
+
+.author-description .author-name {
+    font-weight: bold;
+    font-size:38px;
+    
+}

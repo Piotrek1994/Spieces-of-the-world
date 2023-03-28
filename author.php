@@ -19,6 +19,36 @@ get_header();
         </div>
         <?php endif; ?>
     </div>
+    <div class="archive-user"><?php
+
+$author_id = get_the_author_meta( 'ID' );
+$avatar_url = get_avatar_url( $author_id, array( 'size' => 200 ) );
+
+// Informacje o autorze
+$author_name = get_the_author_meta( 'display_name' );
+$author_bio = get_the_author_meta( 'description' );
+$author_posts_url = get_author_posts_url( $author_id );
+
+// Linki do LinkedIn i Facebook
+$linkedin_url = 'https://pl.linkedin.com/';
+$facebook_url = 'https://www.facebook.com/';
+
+
+// Wyświetlanie informacji o autorze, zdjęcia oraz linków do LinkedIn i Facebook
+echo '<div class="author-info">';
+echo '<img src="' . esc_url( $avatar_url ) . '" alt="' . esc_attr( $author_name ) . '" class="author-avatar">';
+echo '<div class="author-description"><h3 class="author-name"><a href="' . esc_url( $author_posts_url ) . '">' . esc_html( $author_name ) . '</a></h3>';
+echo '<p class="author-bio">' . esc_html( $author_bio ) . '</p></div>';
+echo '<div class="author-social-links">';
+
+echo '<a href="' . esc_url($linkedin_url) . '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-2xl"></i></a>';
+echo '<a href="' . esc_url( $facebook_url ) . '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>';
+
+echo '</div>';
+echo '</div>';
+	
+	?>
+    </div>
 
 
 

@@ -10,35 +10,18 @@
 
 .archive-container aside {
   grid-column: 9 / -1;
-  grid-row:  3 / 4;
+  grid-row: 3 / 4;
 }
 
 .archive-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   text-align: center;
   height: 100px;
-}
-
-.archive-user {
-    grid-column: 1 / -1;
-}
-
-.author-info img {
-    border-radius: 50%;
-    max-width: 100%;
-    height: auto;
-}
-
-.author-social-links {
-    display: flex;
-    flex-direction: column;
-}
-
-.author-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .archive-container-post {
