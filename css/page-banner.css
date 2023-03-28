@@ -1,81 +1,78 @@
 .page-banner {
-	margin-top: 100px;
-	position: relative;
-	background-size: cover;
-	width: 100%;
-	height: 600px;
-
-	z-index: 20;
-	background-position: center;
-	z-index: 1;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  margin-top: 86px;
+  z-index: 20;
+  background-position: center;
+  z-index: 1;
 }
-
 
 .overlay {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5); /* Przyciemnienie banera, możesz zmienić wartość 0.5 na inną */
-	z-index: 1; /* Warstwa przyciemniająca znajduje się pomiędzy tekstem a banerem */
-  }
-
-
-
-.banner-container {
-	height: auto;
-	color: white;
-	z-index: 200;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Przyciemnienie banera, możesz zmienić wartość 0.5 na inną */
+  z-index: 1; /* Warstwa przyciemniająca znajduje się pomiędzy tekstem a banerem */
 }
 
-.banner-container-content{
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1170px;
-	padding: 0px 16px 0px 16px;
-  color: #fff; 
-  z-index: 2; 
+.banner-container {
+  height: auto;
+  color: white;
+  z-index: 200;
+}
+
+.banner-container-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+  padding: 0px 16px 0px 16px;
+  color: #fff;
+  z-index: 2;
 }
 
 .banner-title a {
-	text-decoration: none;
-	font-weight: bold;
-	color: white;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
 }
-
-
 
 .banner-recipe-category {
-	margin: 1rem 0;
-	font-weight: 400;
+  margin: 1rem 0;
+  font-weight: 400;
 }
 
-.banner-recipe-category a, .banner-more-info a {
-	text-decoration: none;
-	color: white;
+.banner-recipe-category a,
+.banner-more-info a {
+  text-decoration: none;
+  color: white;
 }
 
 .banner-recipe-content {
-	
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .banner-more-info {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 .banner-more-info::after {
-	position: absolute;
-	display: block;
-	content: '';
-	bottom: -10px;
-	width: 100%;
-	height: 1px;
-	background-color:rgba(255, 255, 255, 0.5);
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
-
-

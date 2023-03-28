@@ -141,7 +141,7 @@ add_action( 'widgets_init', 'spieces_widgets_init' );
  * Enqueue scripts and styles.
  */
 function spieces_scripts() {
-	wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap');
+	wp_enqueue_style( 'monserat', '//fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800;900&display=swap');
 	wp_enqueue_style( 'spieces-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'home-page', get_template_directory_uri(). '/css/home-page.css');
 	wp_enqueue_style( 'page-banner', get_template_directory_uri(). '/css/page-banner.css');

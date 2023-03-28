@@ -48,7 +48,7 @@
         <div class="entry-content">
             <?php
     $content = get_the_content();
-    $trimmed_content = wp_trim_words($content, 50, '...');
+    $trimmed_content = wp_trim_words($content, 40, '...');
     
     echo $trimmed_content;
     

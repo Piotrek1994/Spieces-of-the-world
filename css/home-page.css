@@ -13,7 +13,7 @@
 
 body {
 	
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 0.6px;
 }
 
@@ -28,7 +28,6 @@ body {
 
 .main-navigation {
 	width: 100%;
-	min-height: 110px;
 	max-width: 1170px;
 	padding: 0px 16px 0px 16px;
 	display: flex;
@@ -41,9 +40,7 @@ body {
  .menu-main-menu-container {
 	display: flex;
 	align-items: center;
-	padding-left: 1rem;
-	
-	width: 900px;
+
 }
 
 .menu {
@@ -59,21 +56,48 @@ body {
 .header-logo {
 	position: relative;
 	margin: 0.5rem 0rem 0.5rem 0rem;
-	width: 90px;
-	height: 90px;
+	width: 70px;
+	height: 70px;
 	z-index: 10;
 	background-size: cover;
+}
+
+.menu-phone-icon {
+	margin-left: 2rem;
+	position: relative;
+	
+}
+
+.menu-phone-icon i {
+	color: var(--black);
+	cursor: pointer;
+	margin-left: 1rem;
+
+	
+
+
 }
 
 
 .menu li a {
 	text-decoration: none;
+	margin-left: 2.5rem;
 	color: black;
 	text-transform: Uppercase;
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 15px;
 	transition: color 0.3s;
 }
+
+.menu-phone-icon::before {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 1);
+
+}
+
 
 .menu li a:hover,
 .menu li a:hover {

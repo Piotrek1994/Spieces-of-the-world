@@ -41,13 +41,18 @@ echo '<div class="author-description"><h3 class="author-name"><a href="' . esc_u
 echo '<p class="author-bio">' . esc_html( $author_bio ) . '</p></div>';
 echo '<div class="author-social-links">';
 
-echo '<a href="' . esc_url($linkedin_url) . '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-2xl"></i></a>';
-echo '<a href="' . esc_url( $facebook_url ) . '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>';
+'<a href="' . esc_url($linkedin_url) . '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-2xl"></i></a>';
+'<a href="' . esc_url( $facebook_url ) . '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>';
 
 echo '</div>';
 echo '</div>';
 	
 	?>
+    </div>
+    <div class="author-posts">
+        <p>Posty użytkownika:
+            <?php echo $author_name ?>
+        </p>
     </div>
 
 

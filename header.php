@@ -48,8 +48,10 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul><div class="menu-phone-icon"><i class="fa-solid fa-mobile-screen-button fa-xl"></i></div>'
 				)
 			);
 			?>
+
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
