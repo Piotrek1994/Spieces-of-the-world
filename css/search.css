@@ -1,7 +1,7 @@
 .search-container {
     display: grid;
 	grid-template-columns: repeat(12, 1fr);
-gap: 2rem;
+    gap: 2rem;
 	max-width: 1400px;
 	margin: 130px auto 0 auto;
 }
