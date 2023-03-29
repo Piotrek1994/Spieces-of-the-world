@@ -9,7 +9,7 @@ while(have_posts()){
 
 </div>
 
-<div class="post-container">
+<div class="post-container container">
     <div class="post-header">
         <p>BLOG</p>
         <?php if (!is_home()): ?>

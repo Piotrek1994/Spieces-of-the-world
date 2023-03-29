@@ -30,7 +30,7 @@
         <header id="masthead" class="site-header">
 
 
-            <nav id="site-navigation" class="main-navigation">
+            <nav id="site-navigation" class="main-navigation container">
                 <a href="<?php echo site_url() ?>">
                     <div class="header-logo"
                         style="background-image: url(<?php echo get_theme_file_uri('/assets/logo2.png') ?>)">

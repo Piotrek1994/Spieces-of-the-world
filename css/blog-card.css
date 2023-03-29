@@ -39,7 +39,7 @@
 
 .blog-card-content a  {
 	text-decoration: none;
-	color: black;
+	color: var(--black);
 }
 .blog-card-text {
     color: var(--light-gray);

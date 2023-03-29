@@ -1,8 +1,5 @@
 .error-404 {
     margin-top: 110px;
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .error-404 h1 {
@@ -15,7 +12,6 @@
 }
 
 
-
 input[type=search] {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -23,7 +19,7 @@ input[type=search] {
 
 .search-submit {
 	background: var(--orange) ;
-    color: white;
+    color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }

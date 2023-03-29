@@ -41,7 +41,7 @@
 	margin: -30px 0px 0px 0px;
 	display: inline-block;
 	vertical-align: top;
-	background-color: white;
+	background-color: var(--white);
     font-weight: bold;
     color: var(--black);
     text-transform: uppercase;
@@ -57,7 +57,7 @@
 	bottom: auto;
 	height: 9px;
 	width: 9px;
-	background: #dddddd;
+	background: var(--white);
 	border-radius: 50%;
 }
 

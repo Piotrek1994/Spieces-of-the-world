@@ -143,7 +143,7 @@ add_action( 'widgets_init', 'spieces_widgets_init' );
 function spieces_scripts() {
 	wp_enqueue_style( 'monserat', '//fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800;900&display=swap');
 	wp_enqueue_style( 'spieces-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'home-page', get_template_directory_uri(). '/css/home-page.css');
+	wp_enqueue_style( 'front-page', get_template_directory_uri(). '/css/front-page.css');
 	wp_enqueue_style( 'page-banner', get_template_directory_uri(). '/css/page-banner.css');
 	wp_enqueue_style( 'page-card', get_template_directory_uri(). '/css/page-card.css');
 	wp_enqueue_style( 'blog-card', get_template_directory_uri(). '/css/blog-card.css');
