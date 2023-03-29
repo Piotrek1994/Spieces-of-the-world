@@ -111,19 +111,24 @@ body {
     margin-top: 1rem;
     text-align: center;
   }
+
+
+  .nav-menu li::after {
+    content: "";
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+
 }
 
 
-.nav-menu li::after {
-  content: "";
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 1rem;
-  width: 90%;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.05);
-}
+
 
 .menu-phone-icon {
   margin-left: 3rem;
@@ -180,6 +185,7 @@ body {
   .sub-menu-button {
     display: block;
   }
+
   
   .active {
     display: block;

@@ -597,10 +597,7 @@ a:focus {
   outline: thin dotted;
 }
 
-a:hover,
-a:active {
-  outline: 0;
-}
+
 
 /* Forms
 --------------------------------------------- */
@@ -732,13 +729,22 @@ textarea {
 }
 
 
+
+
 @media screen and (max-width: 767px) {
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
-    display: none;
     left: unset;
+    display: block;
+  }
+  .main-navigation ul ul {
+    left: unset;
+    
   }
 }
+
+
+
 @media screen and (min-width: 768px) {
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
