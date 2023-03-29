@@ -41,10 +41,10 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul><div class="menu-phone-icon"><i class="fa-solid fa-mobile-screen-button fa-xl"></i></div>'
-				)
-			);
-			?>
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul><div class="menu-phone-icon"></div>'
+    )
+    );
+    ?>
                 <button class="menu-toggle hamburger hamburger--collapse" aria-controls="primary-menu"
                     aria-expanded="false" type="button">
                     <span class="hamburger-box">

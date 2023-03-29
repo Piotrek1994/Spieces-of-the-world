@@ -1,7 +1,9 @@
 .post-container {
 	display: grid;
+	gap: 1rem;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 100px auto;
+	padding: 0px 10px 0px 10px ;
 	width: 100%;
 	margin-top: 100px;
 }
@@ -17,7 +19,7 @@
 }
 
 aside {
-	grid-column: 10 / -1;
+	grid-column: 9 / -1;
 	grid-row: 2 / 3;
 }
 

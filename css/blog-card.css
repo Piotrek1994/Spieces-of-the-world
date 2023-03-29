@@ -17,6 +17,11 @@
     max-height: 300px;
 }
 
+.blog-card img {
+    height: auto;
+    max-width: 100%;
+}
+
 .blog-card-content {
     margin-top: 1rem;
     margin-left: 1.5rem;

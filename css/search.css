@@ -31,3 +31,11 @@ grid-column: 1/-1;
 .search-container aside {
     grid-column: 9 / -1;
 }
+
+.not-found {
+    grid-column: 1/-1;
+}
+
+.not-found .search-form {
+    margin-top: 1rem;
+}
