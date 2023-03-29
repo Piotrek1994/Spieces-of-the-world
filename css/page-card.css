@@ -10,6 +10,12 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 576px) {
+  .category-container {
+    flex-direction: column;
+  }
+}
+
 .category-header {
   position: relative;
   text-align: center;

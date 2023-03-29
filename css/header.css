@@ -12,23 +12,16 @@
   margin: 0px auto 0px auto;
 }
 
-
-
-@media (min-width: 1200px)  and (max-width: 1400px) { 
- .container {
-  max-width: 1200px;
- }
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
 }
-@media (min-width: 992px)  and (max-width: 1199px) { 
- .container {
-  max-width: 1000px;
- }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 1000px;
+  }
 }
-
-
-
-
-
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -63,7 +56,6 @@ body {
   width: 100%;
 }
 
-
 .header-logo {
   position: relative;
   margin: 0.5rem 0rem 0.5rem 0rem;
@@ -72,8 +64,6 @@ body {
   z-index: 10;
   background-size: cover;
 }
-
-
 
 .menu-phone-icon i {
   color: var(--black);
@@ -89,6 +79,50 @@ body {
   font-weight: 600;
   font-size: 15px;
   transition: color 0.3s;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .menu li a {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu li a {
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu li a {
+    margin: 0;
+  }
+  .menu-main-menu-container {
+    display: block;
+    position: absolute;
+    background: var(--white);
+    top: 86px;
+    width: 100vw;
+    width: 100dvw;
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+
+.nav-menu li::after {
+  content: "";
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem;
+  width: 90%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .menu-phone-icon {
@@ -116,26 +150,19 @@ body {
   color: var(--orange);
 }
 
+.sub-menu-button {
+  display: none;
+}
+
 @media (min-width: 768px) {
-	.main-navigation .menu-toggle {
-	  display: none;
-	}
-  
-	.main-navigation ul {
-	  display: flex;
-	}
+  .main-navigation .menu-toggle {
+    display: none;
   }
 
-
-
-
-
-
-
-
-
-
-
+  .main-navigation ul {
+    display: flex;
+  }
+}
 
 @media (max-width: 768px) {
   .menu-phone-icon {
@@ -148,8 +175,13 @@ body {
   .menu-toggle,
   .main-navigation.toggled ul {
     display: block;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
+  }
+
+  .sub-menu-button {
+    display: block;
+  }
+  
+  .active {
+    display: block;
   }
 }

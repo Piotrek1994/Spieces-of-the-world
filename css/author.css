@@ -5,9 +5,9 @@
 
 .author-info img {
     border-radius: 50%;
-    max-width: 100%;
-    height: auto;
 }
+
+
 
 .author-social-links {
     display: flex;
@@ -48,6 +48,17 @@
     padding: 0rem 4rem 0rem 4rem;
 }
 
+@media (max-width: 768px){
+    .author-info {
+        flex-direction: column;
+        padding: 0;
+        
+    }
+    .author-description {
+        padding: 1.7rem;
+    }
+   }
+
 
 .author-description .author-name {
     font-weight: bold;
@@ -68,3 +79,4 @@
     height: 100px;
  
 }
+

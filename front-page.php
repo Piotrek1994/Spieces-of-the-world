@@ -40,7 +40,7 @@ get_header();
                 $title = get_the_title();
                 $category = get_the_category_list(', ');
                 $content = wp_trim_words( get_the_content(), 100 );
-                echo '<div class="container"><div class="banner-container-content">';
+                echo '<div class="container container-height"><div class="banner-container-content">';
                 echo '<h1 class="banner-title"><a href="' . get_permalink() . '">' . $title . '</a></h1>';
                 echo '<h2 class="banner-recipe-category">Kategoria: ' . $category . '<h2>';
                 echo '<div class="banner-recipe-content">' . $content . '</div></div></div>';
@@ -85,7 +85,7 @@ if ( $recent_posts->have_posts() ) :
 
             <div class="recipe-card-image"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" /></div>
             <a href="<?php the_permalink() ?>">
-                <h4 class="post-title"><?php echo get_the_title(); ?></h4>
+                <h4 class="post-title"><?php echo wp_trim_words(get_the_title(), 7); ?></h4>
             </a>
 
 

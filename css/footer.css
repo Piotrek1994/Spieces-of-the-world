@@ -1,7 +1,5 @@
 .site-footer {
     background-color: var(--black);
-    height: 15rem;
-   
 }
 
 .footer-apps, .footer-info{
@@ -19,7 +17,10 @@
     color: var(--white);
 } 
 
-
+.footer-apps {
+    height: 100%;
+    padding-bottom: 3rem;
+}
 
 .huawei-logo {
     height: 41px;
