@@ -727,6 +727,7 @@ textarea {
     display: block;
    text-align: center;
    margin-top: 1rem;
+   background-color: rgb(196, 196, 196, 0.1);
   }
   .menu .menu-item .sub-menu.toggle li a{
     margin-right: auto;

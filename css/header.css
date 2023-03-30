@@ -178,18 +178,28 @@ body {
 
   .sub-menu-button {
     display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
     border: transparent;
-    background-color: #f15e09b7;
-    color: var(--white);
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     position: absolute;
     cursor: pointer;
-    left: 2.3rem;
+    right: 2.3rem;
     top: -0.3rem;
+    transition: transform 0.5s ease;
+  
   }
-
+  .sub-menu-button * {
+    width: 15px;
+    height: 15px;
+  }
+  path {
+    fill: rgb(255, 255, 255);
+  }​
 
   .active {
     display: block;
