@@ -103,15 +103,29 @@ else :
 
 
 <section class="blog-section container">
-    <h2 class="category-header">KATEGORIA ZIOŁA</h2>
+    <h2 class="category-header">
+
+        <?php
+$saved_text = get_theme_mod('mytheme_new_option2', '');
+
+if (!empty($saved_text)) {
+    echo '<p>' . esc_html($saved_text) . '</p>';
+}
+?>
+
+    </h2>
     <div class="blog-container">
 
         <?php
+
+$selected_category_id = get_theme_mod('mytheme_new_option', 'default_value');
+$kategoria = get_category($selected_category_id);
 $args = array(
   'post_type' => 'post',
-  'category_name' => 'zioła',
+  'category_name' => $kategoria->slug,
   'posts_per_page' => 2
 );
+
 $posts = new WP_Query($args);
 if ($posts->have_posts()) {
   while ($posts->have_posts()) {
@@ -132,6 +146,7 @@ if ($posts->have_posts()) {
                 <div class="blog-card-text"><?php echo wp_trim_words(get_the_content(), 25); ?></div>
             </div>
 
+
         </div>
 
 
@@ -140,17 +155,7 @@ if ($posts->have_posts()) {
   }
 }
 ?>
-
-
-
-
-
-
-
-
     </div>
-
-
 </section>
 
 

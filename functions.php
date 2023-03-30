@@ -239,3 +239,79 @@ function my_menu(){
 }
 
 add_action('after_setup_theme', 'my_menu');
+
+
+function mytheme_customize_register($wp_customize) {
+
+    // Dodaj pierwszą sekcję
+    $wp_customize->add_section('mytheme_new_section', array(
+        'title'       => __('Wpisy na stronie głównej', 'mytheme'),
+        'priority'    => 30,
+    ));
+
+    // Dodaj opcję (ustawienie) dla pierwszej sekcji
+    $wp_customize->add_setting('mytheme_new_option', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla pierwszej sekcji
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'mytheme_new_control',
+        array(
+            'label'      => __('Wybierz kategorię', 'mytheme'),
+            'section'    => 'mytheme_new_section',
+            'settings'   => 'mytheme_new_option',
+            'type'       => 'select',
+            'choices'    => mytheme_get_categories_choices(),
+        )
+    ));
+	
+	
+
+    // Dodaj drugą sekcję
+    $wp_customize->add_section('mytheme_new_section2', array(
+        'title'       => __('Wprowadź tekst', 'mytheme'),
+        'priority'    => 30,
+    ));
+
+    // Dodaj opcję (ustawienie) dla drugiej sekcji
+    $wp_customize->add_setting('mytheme_new_option2', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla drugiej sekcji
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'mytheme_new_control2',
+        array(
+            'label'      => __('Wpisz dowolne słowo', 'mytheme'),
+            'section'    => 'mytheme_new_section2',
+            'settings'   => 'mytheme_new_option2',
+            'type'       => 'text',
+        )
+    ));
+}
+
+add_action('customize_register', 'mytheme_customize_register');
+
+
+
+
+
+
+
+
+function mytheme_get_categories_choices() {
+    $categories_obj = get_categories();
+    $categories = array();
+    $categories[''] = __('Wybierz kategorię', 'mytheme');
+
+    foreach ($categories_obj as $category) {
+        $categories[$category->term_id] = $category->name;
+    }
+
+    return $categories;
+}
