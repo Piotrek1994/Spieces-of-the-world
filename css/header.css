@@ -89,7 +89,7 @@ body {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .menu li a {
-    margin-left: 0.8rem;
+    margin-left: 1.2rem;
   }
 }
 
@@ -112,7 +112,6 @@ body {
     text-align: center;
   }
 
-
   .nav-menu li::after {
     content: "";
     display: block;
@@ -123,12 +122,7 @@ body {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.05);
   }
-
-
 }
-
-
-
 
 .menu-phone-icon {
   margin-left: 3rem;
@@ -184,9 +178,19 @@ body {
 
   .sub-menu-button {
     display: block;
+    border: transparent;
+    background-color: #f15e09b7;
+    color: var(--white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    left: 2.3rem;
+    top: -0.3rem;
   }
 
-  
+
   .active {
     display: block;
   }

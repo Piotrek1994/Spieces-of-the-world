@@ -11,7 +11,7 @@ menuItemsWithChildren.forEach((menuItem) => {
   subMenuButton.classList.add('sub-menu-button');
 
   // Ustaw tekst przycisku
-  subMenuButton.textContent = 'Sub Menu';
+  subMenuButton.textContent = '↓';
 
   // Dodaj przycisk do elementu z klasą 'menu-item-has-children'
   menuItem.insertBefore(subMenuButton, sub);

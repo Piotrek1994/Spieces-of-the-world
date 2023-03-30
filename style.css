@@ -725,7 +725,31 @@ textarea {
   }
   .menu .menu-item .sub-menu.toggle {
     display: block;
+   text-align: center;
+   margin-top: 1rem;
   }
+  .menu .menu-item .sub-menu.toggle li a{
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+  .menu .menu-item .sub-menu.toggle li::after {
+    width: 70%;
+  
+
+  }
+
+  .menu .menu-item .sub-menu.toggle li:first-child::before {
+    content: '';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    width: 70%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
 }
 
 
@@ -749,6 +773,37 @@ textarea {
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
     left: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding-bottom: 1rem;
+    width: 140%;
+    
+  }
+   .sub-menu li {
+    margin-bottom: 1rem;
+    
+  }
+  .sub-menu li:first-child{
+    margin-top: 1rem;
+  }
+  .main-navigation ul li:hover > ul a,
+  .main-navigation ul li.focus > ul a {
+    font-weight: 400;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    width: 130%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    width: 125%;
   }
 }
 
