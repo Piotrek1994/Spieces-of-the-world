@@ -163,7 +163,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu-phone-icon {
     display: none;
   }
@@ -190,7 +190,7 @@ body {
     cursor: pointer;
     right: 2.3rem;
     top: -0.3rem;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
   
   }
   .sub-menu-button * {

@@ -1,49 +1,48 @@
 .error-404 {
-    margin-top: 110px;
+  margin-top: 110px;
 }
 
 .error-404 h1 {
-    font-weight: bold;
-    color: var(--black);
+  font-weight: bold;
+  color: var(--black);
 }
 
 .error-404 .page-content p {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-
-input[type=search] {
-	border: 1px solid rgba(0, 0, 0, 0.1);
+input[type="search"] {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 
 .search-submit {
-	background: var(--orange) ;
-    color: var(--white);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+  background: var(--orange);
+  color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .widget_recent_entries {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .widget h2 {
-    font-weight: bold;
-    font-size: 24px;
-    color: var(--black);
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--black);
 }
 
-.widget ul li a{
-    text-decoration: none;
-    color: var(--black);
+.widget ul li a {
+  text-decoration: none;
+  color: var(--black);
 }
 
-.widget ul li a:hover, .widget ul li a:hover  {
-    color: var(--orange);
+.widget ul li a:hover,
+.widget ul li a:hover {
+  color: var(--orange);
 }
 
 .widget ul li {
-    list-style: none;
-    margin-bottom: 0.2rem;
+  list-style: none;
+  margin-bottom: 0.2rem;
 }
