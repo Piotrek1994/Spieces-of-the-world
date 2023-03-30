@@ -129,7 +129,7 @@ if ($posts->have_posts()) {
                 <a href="<?php the_permalink() ?>">
                     <div class="blog-card-title"><?php echo wp_trim_words(get_the_title(), 5); ?></div>
                 </a>
-                <div class="blog-card-text"><?php echo wp_trim_words(get_the_content(), 15); ?></div>
+                <div class="blog-card-text"><?php echo wp_trim_words(get_the_content(), 25); ?></div>
             </div>
 
         </div>

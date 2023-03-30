@@ -191,7 +191,6 @@ body {
     right: 2.3rem;
     top: -0.3rem;
     transition: transform 0.3s ease;
-  
   }
   .sub-menu-button * {
     width: 15px;
@@ -199,9 +198,8 @@ body {
   }
   path {
     fill: rgb(255, 255, 255);
-  }​
-
-  .active {
+  }
+  ​ .active {
     display: block;
   }
 }

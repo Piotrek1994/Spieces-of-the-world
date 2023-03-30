@@ -777,7 +777,7 @@ textarea {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    padding-bottom: 1rem;
+
     width: 140%;
     
   }
