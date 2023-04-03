@@ -106,23 +106,21 @@ else :
 
 <section class="blog-section container">
     <?php
-    $selected_category = get_theme_mod('mytheme_new_option');
+$selected_category = get_theme_mod('mytheme_new_option');
 
-    if ($selected_category != '' && $selected_category != 'none') {
-        $kategoria = get_category($selected_category);
+if ($selected_category != '' && $selected_category != 'none') {
+    $kategoria = get_category($selected_category);
+    $saved_text = get_theme_mod('mytheme_new_option2', '');
+
+    if (!empty($saved_text)) {
         ?>
     <h2 class="category-header">
-        <?php
-            $saved_text = get_theme_mod('mytheme_new_option2', '');
-
-            if (!empty($saved_text)) {
-                echo esc_html($saved_text);
-            }
-            ?>
+        <?php echo esc_html($saved_text); ?>
     </h2>
     <?php
     }
-    ?>
+}
+?>
     <div class="blog-container">
         <?php
 

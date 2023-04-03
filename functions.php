@@ -249,6 +249,7 @@ function mytheme_customize_register($wp_customize) {
         'priority'    => 30,
     ));
 
+
     // Dodaj opcję (ustawienie) dla pierwszej sekcji
     $wp_customize->add_setting('mytheme_new_option', array(
         'default'     => '',
@@ -286,7 +287,7 @@ function mytheme_customize_register($wp_customize) {
         'mytheme_new_control2',
         array(
             'label'      => __('Wpisz dowolne słowo', 'mytheme'),
-            'section'    => 'mytheme_new_section2',
+            'section'    => 'mytheme_new_section',
             'settings'   => 'mytheme_new_option2',
             'type'       => 'text',
         )
@@ -310,7 +311,7 @@ function mytheme_customize_register($wp_customize) {
         'mytheme_new_control3',
         array(
             'label'      => __('Wybierz liczbę wyświetlanych postów', 'mytheme'),
-            'section'    => 'mytheme_new_section3',
+            'section'    => 'mytheme_new_section',
             'settings'   => 'mytheme_new_option3',
             'type'       => 'select',
             'choices'    => array(
@@ -319,6 +320,9 @@ function mytheme_customize_register($wp_customize) {
 				'6' => __('6', 'mytheme'),
 				'8' => __('8', 'mytheme'),
 				'10' => __('10', 'mytheme'),
+				'12' => __('12', 'mytheme'),
+				'14' => __('14', 'mytheme'),
+				'16' => __('16', 'mytheme'),
 			),
 		)
 	));
