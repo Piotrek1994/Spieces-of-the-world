@@ -112,7 +112,6 @@
   grid-column: 1/7;
   grid-row: 1/2;
 }
-
 .archive-line::before {
   content: "";
   display: block;
@@ -128,10 +127,12 @@
   font-weight: 600;
   color: var(--black);
 }
-.posted-on a,
-.entry-title a,
-.author a {
+:is(.posted-on, .entry-title, .author ) a {
   text-decoration: none;
+  color: var(--orange);
+}
+.entry-title a {
+  color: var(--black);
 }
 .entry-meta {
   margin-top: 0.4rem;
@@ -139,17 +140,6 @@
   color: var(--orange);
   font-size: 14px;
 }
-
-.posted-on a,
-.author a {
-  color: var(--orange);
-  
-}
-
-.entry-title a {
-  color: var(--black);
-}
-
 .pagination {
   margin-bottom: 2rem;
 }
@@ -159,7 +149,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .nav-links a .icon,
 .nav-links .icon a,
 .current {

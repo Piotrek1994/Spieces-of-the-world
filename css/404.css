@@ -7,7 +7,7 @@
   color: var(--black);
 }
 
-.error-404 .page-content p {
+.error-404 p {
   margin-bottom: 0.5rem;
 }
 
@@ -32,7 +32,7 @@ input[type="search"] {
   color: var(--black);
 }
 
-.widget ul li a {
+.widget a {
   text-decoration: none;
   color: var(--black);
 }

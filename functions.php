@@ -137,6 +137,23 @@ function spieces_widgets_init() {
 }
 add_action( 'widgets_init', 'spieces_widgets_init' );
 
+
+// function wp_enqueue_woocommerce_style(){
+//     wp_enqueue_style( 'woostify-parent-style', get_template_directory_uri() . '/style.css', 996 );
+//     wp_enqueue_style( 'woostify-style', get_stylesheet_uri(), 997 );
+//     wp_enqueue_style( 'cs-theme', get_stylesheet_directory_uri() . '/css/cs-theme.css', 998 );
+//     wp_register_style( 'cs-product-grid', get_stylesheet_directory_uri() . '/css/woocommerce/cs-product-grid.css', 999 );
+//     wp_register_style( 'cs-product-archive', get_stylesheet_directory_uri() . '/css/woocommerce/cs-product-archive.css', 999);
+//     wp_register_style( 'cs-woo-single-product', get_stylesheet_directory_uri() . '/css/woocommerce/cs-single-product.css', 999);
+//     wp_register_style( 'cs-woo-cart', get_stylesheet_directory_uri() . '/css/woocommerce/cs-woocommerce-cart.css', 999);
+
+//         if ( is_archive () ) {
+//             wp_enqueue_style( 'cs-woo-single-product' );
+//         }
+   
+//     }
+// add_action( 'wp_enqueue_scripts', 'wp_enqueue_woocommerce_style' );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -250,6 +267,7 @@ function mytheme_customize_register($wp_customize) {
     ));
 
 
+
     // Dodaj opcję (ustawienie) dla pierwszej sekcji
     $wp_customize->add_setting('mytheme_new_option', array(
         'default'     => '',
@@ -330,12 +348,6 @@ function mytheme_customize_register($wp_customize) {
 }
 
 add_action('customize_register', 'mytheme_customize_register');
-	
-
-
-
-
-
 
 
 function mytheme_get_categories_choices() {
@@ -349,4 +361,112 @@ function mytheme_get_categories_choices() {
     }
 
     return $categories;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function mytheme_customize_register2($wp_customize2) {
+
+    // Dodaj pierwszą sekcję
+    $wp_customize2->add_section('mytheme_new_section_second', array(
+        'title'       => __('Wpisy na stronie głównej dwa', 'mytheme2'),
+        'priority'    => 31,
+    ));
+
+
+
+    // Dodaj opcję (ustawienie) dla pierwszej sekcji
+    $wp_customize2->add_setting('mytheme_new_option_second', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla pierwszej sekcji
+    $wp_customize2->add_control(new WP_Customize_Control(
+        $wp_customize2,
+        'mytheme_second_control',
+        array(
+            'label'      => __('Wybierz kategorię', 'mytheme2'),
+            'section'    => 'mytheme_new_section_second',
+            'settings'   => 'mytheme_new_option_second',
+            'type'       => 'select',
+            'choices'    => mytheme_get_categories_choices(),
+        )
+    ));
+
+    // Dodaj drugą sekcję
+    $wp_customize2->add_section('mytheme_new_section_second', array(
+        'title'       => __('Wprowadź tekst', 'mytheme2'),
+        'priority'    => 30,
+    ));
+
+    // Dodaj opcję (ustawienie) dla drugiej sekcji
+    $wp_customize2->add_setting('mytheme_new_option_second2', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla drugiej sekcji
+    $wp_customize2->add_control(new WP_Customize_Control(
+        $wp_customize2,
+        'mytheme_second_control2',
+        array(
+            'label'      => __('Wpisz dowolne słowo', 'mytheme2'),
+            'section'    => 'mytheme_new_section_second',
+            'settings'   => 'mytheme_new_option_second2',
+            'type'       => 'text',
+        )
+    ));
+
+    // Dodaj trzecią sekcję
+    $wp_customize2->add_section('mytheme_new_section_second3', array(
+        'title'       => __('Wybierz liczbę wyświetlanych postów', 'mytheme2'),
+        'priority'    => 30,
+    ));
+
+    // Dodaj opcję (ustawienie) dla trzeciej sekcji
+    $wp_customize2->add_setting('mytheme_new_option_second3', array(
+        'default'     => '6', // Domyślna wartość to 6
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla trzeciej sekcji
+    $wp_customize2->add_control(new WP_Customize_Control(
+        $wp_customize2,
+        'mytheme_second_control3',
+        array(
+            'label'      => __('Wybierz liczbę wyświetlanych postów', 'mytheme2'),
+            'section'    => 'mytheme_new_section_second',
+            'settings'   => 'mytheme_new_option_second3',
+            'type'       => 'select',
+            'choices'    => array(
+				'2' => __('2', 'mytheme2'),
+				'4' => __('4', 'mytheme2'),
+				'6' => __('6', 'mytheme2'),
+				'8' => __('8', 'mytheme2'),
+				'10' => __('10', 'mytheme2'),
+				'12' => __('12', 'mytheme2'),
+				'14' => __('14', 'mytheme2'),
+				'16' => __('16', 'mytheme2'),
+			),
+		)
+	));
+
+}
+
+add_action('customize_register', 'mytheme_customize_register2');
+
+
+function mytheme_get_categories_choices2() {
+    $categories_obj2 = get_categories();
+    $categories2 = array();
+    $categories2[''] = __('Wybierz kategorię', 'mytheme2');
+    $categories2['none'] = __('Nic', 'mytheme2');// Dodaje nowa opcje nic
+
+    foreach ($categories_obj2 as $category2) {
+        $categories2[$category2->term_id] = $category2->name;
+    }
+
+    return $categories2;
 }
