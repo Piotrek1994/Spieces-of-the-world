@@ -269,6 +269,7 @@ function mytheme_customize_register($wp_customize) {
     ));
 	
 	
+	
 
     // Dodaj drugą sekcję
     $wp_customize->add_section('mytheme_new_section2', array(
@@ -308,6 +309,7 @@ function mytheme_get_categories_choices() {
     $categories_obj = get_categories();
     $categories = array();
     $categories[''] = __('Wybierz kategorię', 'mytheme');
+    $categories['none'] = __('Nic', 'mytheme');// Dodaje nowa opcje nic
 
     foreach ($categories_obj as $category) {
         $categories[$category->term_id] = $category->name;

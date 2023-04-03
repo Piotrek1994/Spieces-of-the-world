@@ -109,7 +109,7 @@ else :
 $saved_text = get_theme_mod('mytheme_new_option2', '');
 
 if (!empty($saved_text)) {
-    echo '<p>' . esc_html($saved_text) . '</p>';
+    echo esc_html($saved_text) ;
 }
 ?>
 
@@ -118,20 +118,22 @@ if (!empty($saved_text)) {
 
         <?php
 
-$selected_category_id = get_theme_mod('mytheme_new_option', 'default_value');
-$kategoria = get_category($selected_category_id);
-$args = array(
-  'post_type' => 'post',
-  'category_name' => $kategoria->slug,
-  'posts_per_page' => 2
-);
+$selected_category = get_theme_mod('mytheme_new_option');
 
-$posts = new WP_Query($args);
-if ($posts->have_posts()) {
-  while ($posts->have_posts()) {
-    $posts->the_post();
-    ?>
+if ($selected_category != '' && $selected_category != 'none') {
+    // Wyświetl wpisy tylko dla wybranej kategorii
+    $kategoria = get_category($selected_category);
+    $args = array(
+        'post_type' => 'post',
+        'category_name' => $kategoria->slug,
+        'posts_per_page' => 2 // Ustawia liczbę wyświetlanych postów na 2
+    );
 
+    $posts = new WP_Query($args);
+    if ($posts->have_posts()) {
+        while ($posts->have_posts()) {
+            $posts->the_post();
+            ?>
         <div class="blog-card">
             <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('small_size'); ?>
@@ -148,13 +150,20 @@ if ($posts->have_posts()) {
 
 
         </div>
-
-
-
         <?php
-  }
-}
-?>
+        }
+        }
+        } else if ($selected_category == 'none') {
+        // Nie wyświetlaj żadnych wpisów
+        }
+
+        ?>
+
+
+
+
+
+
     </div>
 </section>
 
