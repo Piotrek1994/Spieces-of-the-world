@@ -102,23 +102,32 @@ else :
 </section>
 
 
+
+
 <section class="blog-section container">
+    <?php
+    $selected_category = get_theme_mod('mytheme_new_option');
+
+    if ($selected_category != '' && $selected_category != 'none') {
+        $kategoria = get_category($selected_category);
+        ?>
     <h2 class="category-header">
-
         <?php
-$saved_text = get_theme_mod('mytheme_new_option2', '');
+            $saved_text = get_theme_mod('mytheme_new_option2', '');
 
-if (!empty($saved_text)) {
-    echo esc_html($saved_text) ;
-}
-?>
-
+            if (!empty($saved_text)) {
+                echo esc_html($saved_text);
+            }
+            ?>
     </h2>
+    <?php
+    }
+    ?>
     <div class="blog-container">
-
         <?php
 
 $selected_category = get_theme_mod('mytheme_new_option');
+$selected_posts_number = get_theme_mod('mytheme_new_option3');
 
 if ($selected_category != '' && $selected_category != 'none') {
     // Wyświetl wpisy tylko dla wybranej kategorii
@@ -126,7 +135,7 @@ if ($selected_category != '' && $selected_category != 'none') {
     $args = array(
         'post_type' => 'post',
         'category_name' => $kategoria->slug,
-        'posts_per_page' => 2 // Ustawia liczbę wyświetlanych postów na 2
+        'posts_per_page' => $selected_posts_number // Ustawia liczbę wyświetlanych postów na wybraną przez użytkownika
     );
 
     $posts = new WP_Query($args);
@@ -137,7 +146,6 @@ if ($selected_category != '' && $selected_category != 'none') {
         <div class="blog-card">
             <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('small_size'); ?>
-
             <?php endif; ?>
 
             <div class="blog-card-content">
@@ -147,25 +155,19 @@ if ($selected_category != '' && $selected_category != 'none') {
                 </a>
                 <div class="blog-card-text"><?php echo wp_trim_words(get_the_content(), 25); ?></div>
             </div>
-
-
         </div>
         <?php
         }
-        }
-        } else if ($selected_category == 'none') {
-        // Nie wyświetlaj żadnych wpisów
-        }
-
+    }
+} else if ($selected_category == 'none') {
+    // Nie wyświetlaj żadnych wpisów
+}
         ?>
-
-
-
-
-
-
     </div>
 </section>
+
+
+
 
 
 

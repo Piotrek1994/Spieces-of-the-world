@@ -267,9 +267,6 @@ function mytheme_customize_register($wp_customize) {
             'choices'    => mytheme_get_categories_choices(),
         )
     ));
-	
-	
-	
 
     // Dodaj drugą sekcję
     $wp_customize->add_section('mytheme_new_section2', array(
@@ -294,10 +291,42 @@ function mytheme_customize_register($wp_customize) {
             'type'       => 'text',
         )
     ));
+
+    // Dodaj trzecią sekcję
+    $wp_customize->add_section('mytheme_new_section3', array(
+        'title'       => __('Wybierz liczbę wyświetlanych postów', 'mytheme'),
+        'priority'    => 30,
+    ));
+
+    // Dodaj opcję (ustawienie) dla trzeciej sekcji
+    $wp_customize->add_setting('mytheme_new_option3', array(
+        'default'     => '6', // Domyślna wartość to 6
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla trzeciej sekcji
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'mytheme_new_control3',
+        array(
+            'label'      => __('Wybierz liczbę wyświetlanych postów', 'mytheme'),
+            'section'    => 'mytheme_new_section3',
+            'settings'   => 'mytheme_new_option3',
+            'type'       => 'select',
+            'choices'    => array(
+				'2' => __('2', 'mytheme'),
+				'4' => __('4', 'mytheme'),
+				'6' => __('6', 'mytheme'),
+				'8' => __('8', 'mytheme'),
+				'10' => __('10', 'mytheme'),
+			),
+		)
+	));
+
 }
 
 add_action('customize_register', 'mytheme_customize_register');
-
+	
 
 
 
