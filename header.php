@@ -40,8 +40,9 @@
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul><div class="menu-phone-icon"></div>'
+                    'menu_id'        => 'primary-menu',
+                    'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul><a href="tel:' . get_theme_mod( 'mytheme_phone_number', '790248450' ) . '" class="menu-phone-icon"></a>'
+
     )
     );
     ?>

@@ -470,3 +470,24 @@ function mytheme_get_categories_choices2() {
 
     return $categories2;
 }
+
+
+
+function mytheme_phone_number( $wp_customize_phone ) {
+    $wp_customize_phone->add_section( 'mytheme_contact' , array(
+        'title'      => __( 'Dane kontaktowe', 'mytheme' ),
+        'priority'   => 32,
+    ));
+
+    $wp_customize_phone->add_setting( 'mytheme_phone_number' , array(
+        'default'   => '790248450',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize_phone->add_control( new WP_Customize_Control( $wp_customize_phone, 'mytheme_phone_number', array(
+        'label'      => __( 'Numer telefonu', 'mytheme' ),
+        'section'    => 'mytheme_contact',
+        'settings'   => 'mytheme_phone_number',
+    )));
+}
+add_action( 'customize_register', 'mytheme_phone_number' );

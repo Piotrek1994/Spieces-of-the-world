@@ -19,10 +19,10 @@ get_header();
 
 
 
-<div class="page-banner" style="background-image: url(<?php echo get_theme_file_uri('./assets/background.jpg') ?>)">
+<div class="page-banner ">
 
-    <div class="banner-container ">
-        <div class="overlay">
+    <div class=" banner-container ">
+        <div class=" overlay">
 
             <?php
                 $args = array(
