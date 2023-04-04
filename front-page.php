@@ -22,8 +22,12 @@ get_header();
 <?php
 $page_banner_background_image = get_theme_mod('page_banner_background_image', '');
 $page_banner_style = $page_banner_background_image ? 'style="background-image: url(' . esc_url($page_banner_background_image) . ');"' : '';
+$page_banner_srcset = my_theme_banner_background_srcset();
+
 ?>
-<div class="page-banner" <?php echo $page_banner_style; ?>>
+<div class="page-banner" <?php echo $page_banner_style; ?> data-srcset="<?php echo esc_attr($page_banner_srcset); ?>">
+
+
 
 
 

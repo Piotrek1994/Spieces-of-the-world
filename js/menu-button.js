@@ -57,3 +57,40 @@ document.addEventListener('DOMContentLoaded', function () {
     button.style.transform = `rotate(${rotation}deg)`;
   });
 });
+
+
+
+
+///////// bacground image
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  function updateBannerBackground() {
+      var pageBanner = document.querySelector('.page-banner');
+      var srcsetData = pageBanner.getAttribute('data-srcset');
+      if (srcsetData) {
+          var srcset = srcsetData.split(', ');
+          var currentSrc = '';
+          for (var i = 0; i < srcset.length; i++) {
+              var src = srcset[i].split(' ');
+              var width = parseInt(src[1], 10);
+              if (window.innerWidth <= width) {
+                  currentSrc = src[0];
+                  break;
+              }
+          }
+          if (!currentSrc && srcset.length) {
+            currentSrc = srcset[srcset.length - 1].split(' ')[0];
+        }
+        if (currentSrc) {
+            pageBanner.style.backgroundImage = 'url(' + currentSrc + ')';
+        }
+    }
+}
+
+updateBannerBackground();
+
+window.addEventListener('resize', function () {
+    updateBannerBackground();
+});
+});

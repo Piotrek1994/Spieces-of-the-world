@@ -511,3 +511,13 @@ function my_theme_customizer_settings($wp_customize) {
     )));
 }
 add_action('customize_register', 'my_theme_customizer_settings');
+
+function my_theme_banner_background_srcset() {
+    $page_banner_background_image = get_theme_mod('page_banner_background_image', '');
+
+    if ($page_banner_background_image) {
+        $image_id = attachment_url_to_postid($page_banner_background_image);
+        return wp_get_attachment_image_srcset($image_id);
+    }
+    return '';
+}

@@ -120,7 +120,7 @@ body {
     margin-top: 1rem;
     width: 90%;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(46, 35, 35, 0.05);
   }
 }
 
@@ -134,35 +134,48 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-  
-  
 }
-
-
 
 .menu-phone-icon {
   animation: jump-shaking 0.83s infinite;
 }
 
+.nav-menu {
+  position: relative;
+}
 
-.menu-phone-icon::before {
+.nav-menu::after {
   content: "";
   display: block;
-  margin-left: -1rem;
   width: 1px;
-  height: 100%;
+  margin-left: 30px;
+  height: auto;
+  z-index: 5;
   background-color: rgba(0, 0, 0, 1);
-  
 }
 
 @keyframes jump-shaking {
-  0% { transform: translateX(0) }
-  25% { transform: translateY(-9px) }
-  35% { transform: translateY(-9px) rotate(17deg) }
-  55% { transform: translateY(-9px) rotate(-17deg) }
-  65% { transform: translateY(-9px) rotate(17deg) }
-  75% { transform: translateY(-9px) rotate(-17deg) }
-  100% { transform: translateY(0) rotate(0) }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateY(-9px);
+  }
+  35% {
+    transform: translateY(-9px) rotate(17deg);
+  }
+  55% {
+    transform: translateY(-9px) rotate(-17deg);
+  }
+  65% {
+    transform: translateY(-9px) rotate(17deg);
+  }
+  75% {
+    transform: translateY(-9px) rotate(-17deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
 }
 
 .menu li a:hover,
