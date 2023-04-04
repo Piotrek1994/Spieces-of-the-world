@@ -73,6 +73,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
+:root {
+  --light-pink: #f7f0e6;
+  --light-gray: #808080;
+  --orange: #f15d09;
+  --black: #000000;
+  --white: #ffffff;
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

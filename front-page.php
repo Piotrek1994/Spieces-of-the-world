@@ -30,7 +30,6 @@ $page_banner_srcset = my_theme_banner_background_srcset();
 
 
 
-
     <div class=" banner-container ">
         <div class=" overlay">
 
@@ -93,7 +92,8 @@ if ( $recent_posts->have_posts() ) :
         <div class="recipe-card">
 
 
-            <div class="recipe-card-image"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" /></div>
+            <div class="recipe-card-image"><a href="<?php the_permalink() ?>"><img src="<?php echo $image[0]; ?>"
+                        alt="<?php the_title(); ?>" /></a></div>
             <a href="<?php the_permalink() ?>">
                 <h4 class="post-title"><?php echo wp_trim_words(get_the_title(), 7); ?></h4>
             </a>

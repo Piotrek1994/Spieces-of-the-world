@@ -31,11 +31,18 @@
 
 
             <nav id="site-navigation" class="main-navigation container">
-                <a href="<?php echo site_url() ?>">
-                    <div class="header-logo"
-                        style="background-image: url(<?php echo get_theme_file_uri('/assets/logo2.png') ?>)">
-                    </div>
-                </a>
+
+
+                <?php if ( get_header_image() ) : ?>
+                <div id="site-header">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img class="header-logo" src="<?php header_image(); ?>"
+                            alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                    </a>
+                </div>
+                <?php endif; ?>
+
+
                 <?php
 			wp_nav_menu(
 				array(
@@ -46,7 +53,7 @@
     )
     );
     ?>
-                <button class="menu-toggle hamburger hamburger--collapse" aria-controls="primary-menu"
+                <button class=" menu-toggle hamburger hamburger--collapse" aria-controls="primary-menu"
                     aria-expanded="false" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>

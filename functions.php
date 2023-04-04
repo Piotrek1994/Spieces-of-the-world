@@ -157,6 +157,8 @@ add_action( 'widgets_init', 'spieces_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+ 
 function spieces_scripts() {
 	wp_enqueue_style( 'monserat', '//fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800;900&display=swap');
 	wp_enqueue_style( 'spieces-style', get_stylesheet_uri(), array(), _S_VERSION );
@@ -510,6 +512,7 @@ function my_theme_customizer_settings($wp_customize) {
         'settings' => 'page_banner_background_image',
     )));
 }
+
 add_action('customize_register', 'my_theme_customizer_settings');
 
 function my_theme_banner_background_srcset() {

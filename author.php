@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div class="archive-container">
+<div class="archive-container container">
     <div class="archive-header">
         <p>BLOG</p>
         <?php if (!is_home()): ?>
