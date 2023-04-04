@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Piotr
 Author URI: http://underscores.me/
 Description: A page dedicated to spices, an online store offering a wide selection of high-quality spices from various parts of the world. Our range includes both classic and lesser-known spices, allowing you to explore and experiment with different flavors in your cooking. Whether you\'re looking for sweet, savory, or spicy, our collection has something for everyone. With our easy-to-use website, you can browse and purchase your favorite spices with just a few clicks. Discover the world of spices and enhance your culinary creations with our premium selection.
-Version: 1.0.2
+Version: 1.0.4
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -86,6 +86,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   max-width: 1400px;
   margin: 0px auto 0px auto;
 }
+
+
 
 
 html, body, div, span, applet, object, iframe,

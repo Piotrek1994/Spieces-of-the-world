@@ -526,3 +526,9 @@ function my_theme_widgets_init() {
     }
 }
 add_action('widgets_init', 'my_theme_widgets_init');
+
+
+
+// PAGINATION RULE
+
+add_rewrite_rule('^blog/([^/]*)/([^/]*)/page/([0-9]+)/?', 'index.php?category_name=$matches[1]&name=$matches[2]&paged=$matches[3]', 'top');
