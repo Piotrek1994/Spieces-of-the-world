@@ -19,7 +19,13 @@ get_header();
 
 
 
-<div class="page-banner ">
+<?php
+$page_banner_background_image = get_theme_mod('page_banner_background_image', '');
+$page_banner_style = $page_banner_background_image ? 'style="background-image: url(' . esc_url($page_banner_background_image) . ');"' : '';
+?>
+<div class="page-banner" <?php echo $page_banner_style; ?>>
+
+
 
     <div class=" banner-container ">
         <div class=" overlay">

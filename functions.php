@@ -491,3 +491,23 @@ function mytheme_phone_number( $wp_customize_phone ) {
     )));
 }
 add_action( 'customize_register', 'mytheme_phone_number' );
+
+
+
+//background change function
+
+function my_theme_customizer_settings($wp_customize) {
+    // Ustawienie tła dla diva z klasą 'page-banner'
+    $wp_customize->add_setting('page_banner_background_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    // Kontrolka do wyboru obrazka tła
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'page_banner_background_image', array(
+        'label' => __('Obraz tła dla Page Banner', 'my_theme'),
+        'section' => 'background_image',
+        'settings' => 'page_banner_background_image',
+    )));
+}
+add_action('customize_register', 'my_theme_customizer_settings');
