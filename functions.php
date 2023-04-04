@@ -532,3 +532,88 @@ add_action('widgets_init', 'my_theme_widgets_init');
 // PAGINATION RULE
 
 add_rewrite_rule('^blog/([^/]*)/([^/]*)/page/([0-9]+)/?', 'index.php?category_name=$matches[1]&name=$matches[2]&paged=$matches[3]', 'top');
+
+
+// Mail and phone 
+
+function mytheme_mail_and_phone_register( $wp_customize ) {
+    // Sekcja Mail
+    $wp_customize->add_section( 'mail_section', array(
+       'title' => __( 'Mail', 'mytheme' ),
+       'priority' => 30
+    ) );
+    // Pole tekstowe dla maila
+    $wp_customize->add_setting( 'mail', array(
+       'default' => '',
+       'transport' => 'postMessage'
+    ) );
+    $wp_customize->add_control( 'mail', array(
+       'label' => __( 'Mail', 'mytheme' ),
+       'section' => 'mail_section',
+       'type' => 'text'
+    ) );
+ 
+    // Sekcja Telefon
+    $wp_customize->add_section( 'phone_section', array(
+       'title' => __( 'Telefon', 'mytheme' ),
+       'priority' => 31
+    ) );
+    // Pole tekstowe dla telefonu
+    $wp_customize->add_setting( 'phone', array(
+       'default' => '',
+       'transport' => 'postMessage'
+    ) );
+    $wp_customize->add_control( 'phone', array(
+       'label' => __( 'Telefon', 'mytheme' ),
+       'section' => 'phone_section',
+       'type' => 'text'
+    ) );
+ }
+ add_action( 'customize_register', 'mytheme_mail_and_phone_register' );
+ 
+
+
+ // ICONS IN NAV
+
+
+ function mytheme_nav_icon_register( $wp_customize ) {
+    // Sekcja Ikony
+    $wp_customize->add_section( 'icon_section', array(
+       'title' => __( 'Ikony', 'mytheme' ),
+       'priority' => 32
+    ) );
+    // Pole tekstowe dla Facebooka
+    $wp_customize->add_setting( 'facebook_url', array(
+       'default' => '',
+       'transport' => 'postMessage'
+    ) );
+    $wp_customize->add_control( 'facebook_url', array(
+       'label' => __( 'Adres URL Facebooka', 'mytheme' ),
+       'section' => 'icon_section',
+       'type' => 'text'
+    ) );
+ 
+    // Pole tekstowe dla LinkedIn
+    $wp_customize->add_setting( 'linkedin_url', array(
+       'default' => '',
+       'transport' => 'postMessage'
+    ) );
+    $wp_customize->add_control( 'linkedin_url', array(
+       'label' => __( 'Adres URL LinkedIn', 'mytheme' ),
+       'section' => 'icon_section',
+       'type' => 'text'
+    ) );
+ 
+    // Pole tekstowe dla Instagrama
+    $wp_customize->add_setting( 'instagram_url', array(
+       'default' => '',
+       'transport' => 'postMessage'
+    ) );
+    $wp_customize->add_control( 'instagram_url', array(
+       'label' => __( 'Adres URL Instagrama', 'mytheme' ),
+       'section' => 'icon_section',
+       'type' => 'text'
+    ) );
+ }
+ add_action( 'customize_register', 'mytheme_nav_icon_register' );
+ 

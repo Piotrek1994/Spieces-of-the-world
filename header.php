@@ -25,9 +25,43 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
+
         <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'piotr' ); ?></a>
 
         <header id="masthead" class="site-header">
+            <div class="nav-top ">
+                <div class="nav-top-info">
+                    <div class="mail-info"><?php echo get_theme_mod( 'mail', 'brak maila' ); ?></div>
+                    <div class="phone-info"><a
+                            href="tel:<?php echo get_theme_mod( 'phone', 'brak telefonu' ); ?>"><?php echo get_theme_mod( 'phone', 'brak telefonu' ); ?></a>
+                    </div>
+                </div>
+                <div class="icon-section">
+                    <?php if ( get_theme_mod( 'facebook_url' ) ) : ?>
+                    <a href="<?php echo esc_url( get_theme_mod( 'facebook_url' ) ); ?>" target="_blank">
+                        <div class="fa fa-facebook">
+                            <?php echo file_get_contents( get_template_directory() . './assets/facebook.svg' ); ?>
+                        </div>
+                    </a>
+                    <?php endif; ?>
+
+                    <?php if ( get_theme_mod( 'linkedin_url' ) ) : ?>
+                    <a href="<?php echo esc_url( get_theme_mod( 'linkedin_url' ) ); ?>" target="_blank">
+                        <div class="fa fa-linkedin">
+                            <?php echo file_get_contents( get_template_directory() . './assets/linkedin.svg' ); ?>
+                        </div>
+                    </a>
+                    <?php endif; ?>
+
+                    <?php if ( get_theme_mod( 'instagram_url' ) ) : ?>
+                    <a href="<?php echo esc_url( get_theme_mod( 'instagram_url' ) ); ?>" target="_blank">
+                        <div class="fa fa-instagram">
+                            <?php echo file_get_contents( get_template_directory() . './assets/instagram.svg' ); ?>
+                        </div>
+                    </a>
+                    <?php endif; ?>
+                </div>
+            </div>
 
 
             <nav id="site-navigation" class="main-navigation container">
