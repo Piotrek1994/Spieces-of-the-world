@@ -138,48 +138,31 @@ function spieces_widgets_init() {
 add_action( 'widgets_init', 'spieces_widgets_init' );
 
 
-// function wp_enqueue_woocommerce_style(){
-//     wp_enqueue_style( 'woostify-parent-style', get_template_directory_uri() . '/style.css', 996 );
-//     wp_enqueue_style( 'woostify-style', get_stylesheet_uri(), 997 );
-//     wp_enqueue_style( 'cs-theme', get_stylesheet_directory_uri() . '/css/cs-theme.css', 998 );
-//     wp_register_style( 'cs-product-grid', get_stylesheet_directory_uri() . '/css/woocommerce/cs-product-grid.css', 999 );
-//     wp_register_style( 'cs-product-archive', get_stylesheet_directory_uri() . '/css/woocommerce/cs-product-archive.css', 999);
-//     wp_register_style( 'cs-woo-single-product', get_stylesheet_directory_uri() . '/css/woocommerce/cs-single-product.css', 999);
-//     wp_register_style( 'cs-woo-cart', get_stylesheet_directory_uri() . '/css/woocommerce/cs-woocommerce-cart.css', 999);
-
-//         if ( is_archive () ) {
-//             wp_enqueue_style( 'cs-woo-single-product' );
-//         }
-   
-//     }
-// add_action( 'wp_enqueue_scripts', 'wp_enqueue_woocommerce_style' );
-
-/**
- * Enqueue scripts and styles.
- */
-
  
 function spieces_scripts() {
 	wp_enqueue_style( 'monserat', '//fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800;900&display=swap');
 	wp_enqueue_style( 'spieces-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'header', get_template_directory_uri(). '/css/header.css');
-	wp_enqueue_style( 'page-banner', get_template_directory_uri(). '/css/page-banner.css');
-	wp_enqueue_style( 'page-card', get_template_directory_uri(). '/css/page-card.css');
-	wp_enqueue_style( 'blog-card', get_template_directory_uri(). '/css/blog-card.css');
-	wp_enqueue_style( 'footer', get_template_directory_uri(). '/css/footer.css');
-	wp_enqueue_style( 'post', get_template_directory_uri(). '/css/post.css');
-	wp_enqueue_style( 'sidebar', get_template_directory_uri(). '/css/sidebar.css');
-	wp_enqueue_style( 'archive', get_template_directory_uri(). '/css/archive.css');
-	wp_enqueue_style( 'search', get_template_directory_uri(). '/css/search.css');
-	wp_enqueue_style( 'hamburgers', get_template_directory_uri() . '/css/404.css' );
-	wp_enqueue_style( 'author', get_template_directory_uri() . '/css/author.css' );
-	wp_enqueue_style( '404', get_template_directory_uri() . '/css/hamburger.css' );
-	wp_style_add_data( 'spieces-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'header_footer', get_template_directory_uri(). '/css/header_footer.css');
+	wp_register_style( 'single', get_template_directory_uri(). '/css/single.css', 999);
+	wp_register_style( 'archive', get_template_directory_uri(). '/css/archive.css');
+	wp_register_style( '404', get_template_directory_uri() . '/css/404.css' );
 	wp_enqueue_script( 'spieces-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+        
 	}
+    
 	wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/menu-button.js', array(), '1.0', true);
+    if (is_singular()){
+        wp_enqueue_style( 'single' );
+    }
+    if (is_archive() || is_single() || is_search()){
+        wp_enqueue_style( 'archive' );
+    }
+    if (is_404()){
+        wp_enqueue_style('404');
+    }
+    
 }
 add_action( 'wp_enqueue_scripts', 'spieces_scripts' );
 
@@ -524,3 +507,22 @@ function my_theme_banner_background_srcset() {
     }
     return '';
 }
+
+
+// FOOTER widgets //
+
+
+function my_theme_widgets_init() {
+    for ($i = 1; $i <= 4; $i++) {
+        register_sidebar(array(
+            'name'          => sprintf(__('Footer Widget Area %d', 'my_theme'), $i),
+            'id'            => 'footer-' . $i,
+            'description'   => sprintf(__('Add widgets here to appear in footer widget area %d.', 'my_theme'), $i),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ));
+    }
+}
+add_action('widgets_init', 'my_theme_widgets_init');
