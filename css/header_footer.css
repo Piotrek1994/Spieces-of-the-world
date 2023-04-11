@@ -102,7 +102,6 @@ body {
   }
 
   .nav-menu li {
-  
     text-align: center;
   }
 
@@ -234,7 +233,7 @@ body {
 
 .nav-top {
   display: flex;
-justify-content: space-around;
+  justify-content: space-around;
   background-color: var(--orange);
   font-size: 14px;
   font-weight: 400;
@@ -257,9 +256,7 @@ justify-content: space-around;
 .phone-info a {
   text-decoration: none;
   color: var(--white);
- 
 }
-
 
 .icon-section {
   display: flex;
@@ -272,19 +269,19 @@ justify-content: space-around;
   max-width: 200px;
 }
 
-.fa-facebook svg path, .fa-instagram svg path, .fa-linkedin svg path{
+.fa-facebook svg path,
+.fa-instagram svg path,
+.fa-linkedin svg path {
   fill: var(--white);
 }
 
-
-.fa-instagram, .fa-facebook, .fa-linkedin   {
+.fa-instagram,
+.fa-facebook,
+.fa-linkedin {
   width: 19px;
   height: 19px;
   cursor: pointer;
 }
-
-
-
 
 /* HAMBURGER */ /* HAMBURGER */ /* HAMBURGER */ /* HAMBURGER */ /* HAMBURGER */ /* HAMBURGER */ /* HAMBURGER */ /* HAMBURGER */ /* HAMBURGER */
 
@@ -483,9 +480,12 @@ justify-content: space-around;
   min-width: 300px; /* Opcjonalne: minimalna szerokość obszaru widgetu */
 }
 
-.footer-widget-area h2 {
+.footer-widgets h2,
+.footer-widgets h3,
+.footer-widgets h4,
+.footer-widgets h5 {
   font-size: 1.5em;
-   font-weight: bolder;
+  font-weight: bolder;
 }
 
 .wp-block-search__inside-wrapper button {

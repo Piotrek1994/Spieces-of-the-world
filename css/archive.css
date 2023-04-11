@@ -485,12 +485,15 @@ aside {
 
 /* CONTENT DIV */ /* CONTENT DIV */ /* CONTENT DIV */ /* CONTENT DIV */ /* CONTENT DIV */ /* CONTENT DIV */
 
-.generic-content h2, h3, h3, h4, h5 {
+.generic-content h2,
+.generic-content h3,
+.generic-content h3,
+.generic-content h4,
+.generic-content h5 {
   font-size: 24px;
   font-weight: bold;
   margin: 2.5rem 0rem 1rem 0rem;
   color: black;
-  
 }
 
 .generic-content p {
@@ -498,3 +501,6 @@ aside {
   color: #666;
 }
 
+.wp-block-image figure {
+  width: 100%;
+}
