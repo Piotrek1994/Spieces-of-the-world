@@ -432,19 +432,289 @@ function mytheme_customize_register2($wp_customize2) {
 add_action('customize_register', 'mytheme_customize_register2');
 
 
-function mytheme_get_categories_choices2() {
-    $categories_obj2 = get_categories();
-    $categories2 = array();
-    $categories2[''] = __('Wybierz kategorię', 'mytheme2');
-    $categories2['none'] = __('Nic', 'mytheme2');// Dodaje nowa opcje nic
 
-    foreach ($categories_obj2 as $category2) {
-        $categories2[$category2->term_id] = $category2->name;
-    }
+///////////////////////////////////////////////////////////////////////////
 
-    return $categories2;
+
+function mytheme_customize_register3($wp_customize3) {
+
+    // Dodaj pierwszą sekcję
+    $wp_customize3->add_section('mytheme_new_section_third', array(
+        'title'       => __('Wpisy na stronie głównej trzy', 'mytheme3'),
+        'priority'    => 32,
+    ));
+
+
+
+    // Dodaj opcję (ustawienie) dla pierwszej sekcji
+    $wp_customize3->add_setting('mytheme_new_option_third', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla pierwszej sekcji
+    $wp_customize3->add_control(new WP_Customize_Control(
+        $wp_customize3,
+        'mytheme_third_control',
+        array(
+            'label'      => __('Wybierz kategorię', 'mytheme3'),
+            'section'    => 'mytheme_new_section_third',
+            'settings'   => 'mytheme_new_option_third',
+            'type'       => 'select',
+            'choices'    => mytheme_get_categories_choices(),
+        )
+    ));
+
+    // Dodaj drugą sekcję
+    $wp_customize3->add_section('mytheme_new_section_third', array(
+        'title'       => __('Wpisy na stronie głównej trzy', 'mytheme3'),
+        'priority'    => 31,
+    ));
+
+    // Dodaj opcję (ustawienie) dla drugiej sekcji
+    $wp_customize3->add_setting('mytheme_new_option_third2', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla drugiej sekcji
+    $wp_customize3->add_control(new WP_Customize_Control(
+        $wp_customize3,
+        'mytheme_third_control2',
+        array(
+            'label'      => __('Wpisz dowolne słowo', 'mytheme3'),
+            'section'    => 'mytheme_new_section_third',
+            'settings'   => 'mytheme_new_option_third2',
+            'type'       => 'text',
+        )
+    ));
+
+    // Dodaj trzecią sekcję
+    $wp_customize3->add_section('mytheme_new_section_third3', array(
+        'title'       => __('Wybierz liczbę wyświetlanych postów', 'mytheme3'),
+        'priority'    => 31,
+    ));
+
+    // Dodaj opcję (ustawienie) dla trzeciej sekcji
+    $wp_customize3->add_setting('mytheme_new_option_third3', array(
+        'default'     => '6', // Domyślna wartość to 6
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla trzeciej sekcji
+    $wp_customize3->add_control(new WP_Customize_Control(
+        $wp_customize3,
+        'mytheme_third_control3',
+        array(
+            'label'      => __('Wybierz liczbę wyświetlanych postów', 'mytheme3'),
+            'section'    => 'mytheme_new_section_third',
+            'settings'   => 'mytheme_new_option_third3',
+            'type'       => 'select',
+            'choices'    => array(
+				'2' => __('2', 'mytheme3'),
+				'4' => __('4', 'mytheme3'),
+				'6' => __('6', 'mytheme3'),
+				'8' => __('8', 'mytheme3'),
+				'10' => __('10', 'mytheme3'),
+				'12' => __('12', 'mytheme3'),
+				'14' => __('14', 'mytheme3'),
+				'16' => __('16', 'mytheme3'),
+			),
+		)
+	));
+
 }
 
+add_action('customize_register', 'mytheme_customize_register3');
+
+///////////////////////////////////
+
+function mytheme_customize_register4($wp_customize4) {
+
+    // Dodaj pierwszą sekcję
+    $wp_customize4->add_section('mytheme_new_section_fourth', array(
+        'title'       => __('Wpisy na stronie głównej cztery', 'mytheme4'),
+        'priority'    => 33,
+    ));
+
+
+
+    // Dodaj opcję (ustawienie) dla pierwszej sekcji
+    $wp_customize4->add_setting('mytheme_new_option_fourth', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla pierwszej sekcji
+    $wp_customize4->add_control(new WP_Customize_Control(
+        $wp_customize4,
+        'mytheme_fourth_control',
+        array(
+            'label'      => __('Wybierz kategorię', 'mytheme4'),
+            'section'    => 'mytheme_new_section_fourth',
+            'settings'   => 'mytheme_new_option_fourth',
+            'type'       => 'select',
+            'choices'    => mytheme_get_categories_choices(),
+        )
+    ));
+
+    // Dodaj drugą sekcję
+    $wp_customize4->add_section('mytheme_new_section_fourth', array(
+        'title'       => __('Wpisy na stronie głównej cztery', 'mytheme4'),
+        'priority'    => 32,
+    ));
+
+    // Dodaj opcję (ustawienie) dla drugiej sekcji
+    $wp_customize4->add_setting('mytheme_new_option_fourth2', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla drugiej sekcji
+    $wp_customize4->add_control(new WP_Customize_Control(
+        $wp_customize4,
+        'mytheme_fourth_control2',
+        array(
+            'label'      => __('Wpisz dowolne słowo', 'mytheme4'),
+            'section'    => 'mytheme_new_section_fourth',
+            'settings'   => 'mytheme_new_option_fourth2',
+            'type'       => 'text',
+        )
+    ));
+
+    // Dodaj trzecią sekcję
+    $wp_customize4->add_section('mytheme_new_section_fourth3', array(
+        'title'       => __('Wybierz liczbę wyświetlanych postów', 'mytheme4'),
+        'priority'    => 32,
+    ));
+
+    // Dodaj opcję (ustawienie) dla trzeciej sekcji
+    $wp_customize4->add_setting('mytheme_new_option_fourth3', array(
+        'default'     => '6', // Domyślna wartość to 6
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla trzeciej sekcji
+    $wp_customize4->add_control(new WP_Customize_Control(
+        $wp_customize4,
+        'mytheme_fourth_control3',
+        array(
+            'label'      => __('Wybierz liczbę wyświetlanych postów', 'mytheme4'),
+            'section'    => 'mytheme_new_section_fourth',
+            'settings'   => 'mytheme_new_option_fourth3',
+            'type'       => 'select',
+            'choices'    => array(
+				'2' => __('2', 'mytheme4'),
+				'4' => __('4', 'mytheme4'),
+				'6' => __('6', 'mytheme4'),
+				'8' => __('8', 'mytheme4'),
+				'10' => __('10', 'mytheme4'),
+				'12' => __('12', 'mytheme4'),
+				'14' => __('14', 'mytheme4'),
+				'16' => __('16', 'mytheme4'),
+			),
+		)
+	));
+
+}
+
+add_action('customize_register', 'mytheme_customize_register4');
+
+
+/////////////////////////////////
+
+///////////////////////////////////
+
+function mytheme_customize_register5($wp_customize5) {
+
+    // Dodaj pierwszą sekcję
+    $wp_customize5->add_section('mytheme_new_section_fifth', array(
+        'title'       => __('Wpisy na stronie głównej pięc', 'mytheme5'),
+        'priority'    => 34,
+    ));
+
+
+
+    // Dodaj opcję (ustawienie) dla pierwszej sekcji
+    $wp_customize5->add_setting('mytheme_new_option_fifth', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla pierwszej sekcji
+    $wp_customize5->add_control(new WP_Customize_Control(
+        $wp_customize5,
+        'mytheme_fifth_control',
+        array(
+            'label'      => __('Wybierz kategorię', 'mytheme5'),
+            'section'    => 'mytheme_new_section_fifth',
+            'settings'   => 'mytheme_new_option_fifth',
+            'type'       => 'select',
+            'choices'    => mytheme_get_categories_choices(),
+        )
+    ));
+
+    // Dodaj drugą sekcję
+    $wp_customize5->add_section('mytheme_new_section_fifth', array(
+        'title'       => __('Wpisy na stronie głównej pięć', 'mytheme5'),
+        'priority'    => 33,
+    ));
+
+    // Dodaj opcję (ustawienie) dla drugiej sekcji
+    $wp_customize5->add_setting('mytheme_new_option_fifth2', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla drugiej sekcji
+    $wp_customize5->add_control(new WP_Customize_Control(
+        $wp_customize5,
+        'mytheme_fifth_control2',
+        array(
+            'label'      => __('Wpisz dowolne słowo', 'mytheme5'),
+            'section'    => 'mytheme_new_section_fifth',
+            'settings'   => 'mytheme_new_option_fifth2',
+            'type'       => 'text',
+        )
+    ));
+
+    // Dodaj trzecią sekcję
+    $wp_customize5->add_section('mytheme_new_section_fifth3', array(
+        'title'       => __('Wybierz liczbę wyświetlanych postów', 'mytheme5'),
+        'priority'    => 33,
+    ));
+
+    // Dodaj opcję (ustawienie) dla trzeciej sekcji
+    $wp_customize5->add_setting('mytheme_new_option_fifth3', array(
+        'default'     => '6', // Domyślna wartość to 6
+        'transport'   => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (pole) dla trzeciej sekcji
+    $wp_customize5->add_control(new WP_Customize_Control(
+        $wp_customize5,
+        'mytheme_fifth_control3',
+        array(
+            'label'      => __('Wybierz liczbę wyświetlanych postów', 'mytheme5'),
+            'section'    => 'mytheme_new_section_fifth',
+            'settings'   => 'mytheme_new_option_fifth3',
+            'type'       => 'select',
+            'choices'    => array(
+				'2' => __('2', 'mytheme5'),
+				'4' => __('4', 'mytheme5'),
+				'6' => __('6', 'mytheme5'),
+				'8' => __('8', 'mytheme5'),
+				'10' => __('10', 'mytheme5'),
+				'12' => __('12', 'mytheme5'),
+				'14' => __('14', 'mytheme5'),
+				'16' => __('16', 'mytheme5'),
+			),
+		)
+	));
+
+}
+
+add_action('customize_register', 'mytheme_customize_register5');
 
 
 /////////////////////////////////
@@ -453,7 +723,7 @@ function mytheme_get_categories_choices2() {
 function mytheme_phone_number( $wp_customize_phone ) {
     $wp_customize_phone->add_section( 'mytheme_contact' , array(
         'title'      => __( 'Dane kontaktowe', 'mytheme' ),
-        'priority'   => 32,
+        'priority'   => 38,
     ));
 
     $wp_customize_phone->add_setting( 'mytheme_phone_number' , array(
@@ -501,6 +771,9 @@ function my_theme_banner_background_srcset() {
 }
 
 
+
+
+
 // FOOTER widgets //
 
 
@@ -521,8 +794,6 @@ add_action('widgets_init', 'my_theme_widgets_init');
 
 
 
-// PAGINATION RULE
-
 
 
 
@@ -534,7 +805,7 @@ function mytheme_mail_and_phone_register( $wp_customize ) {
     // Sekcja Mail
     $wp_customize->add_section( 'mail_section', array(
        'title' => __( 'Mail', 'mytheme' ),
-       'priority' => 30
+       'priority' => 36
     ) );
     // Pole tekstowe dla maila
     $wp_customize->add_setting( 'mail', array(
@@ -550,7 +821,7 @@ function mytheme_mail_and_phone_register( $wp_customize ) {
     // Sekcja Telefon
     $wp_customize->add_section( 'phone_section', array(
        'title' => __( 'Telefon', 'mytheme' ),
-       'priority' => 31
+       'priority' => 39
     ) );
     // Pole tekstowe dla telefonu
     $wp_customize->add_setting( 'phone', array(
@@ -567,6 +838,11 @@ function mytheme_mail_and_phone_register( $wp_customize ) {
  
 
 
+
+ 
+
+
+
  // ICONS IN NAV
 
 
@@ -574,7 +850,7 @@ function mytheme_mail_and_phone_register( $wp_customize ) {
     // Sekcja Ikony
     $wp_customize->add_section( 'icon_section', array(
        'title' => __( 'Ikony', 'mytheme' ),
-       'priority' => 32
+       'priority' => 39
     ) );
     // Pole tekstowe dla Facebooka
     $wp_customize->add_setting( 'facebook_url', array(

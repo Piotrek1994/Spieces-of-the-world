@@ -245,8 +245,192 @@ if ($selected_category != '' && $selected_category != 'none') {
 
 </section>
 
+<section class="blog-section container">
+    <?php
+$selected_category = get_theme_mod('mytheme_new_option_third');
+
+if ($selected_category != '' && $selected_category != 'none') {
+    $kategoria = get_category($selected_category);
+    $saved_text2 = get_theme_mod('mytheme_new_option_third2', '');
+
+    if (!empty($saved_text2)) {
+        ?>
+    <h2 class="category-header">
+        <?php echo esc_html($saved_text2); ?>
+    </h2>
+    <?php
+    }
+}
+?>
+    <div class="blog-container">
+        <?php
+
+$selected_category = get_theme_mod('mytheme_new_option_third');
+$selected_posts_number2 = get_theme_mod('mytheme_new_option_third3');
+
+if ($selected_category != '' && $selected_category != 'none') {
+    // Wyświetl wpisy tylko dla wybranej kategorii
+    $kategoria = get_category($selected_category);
+    $args2 = array(
+        'post_type' => 'post',
+        'category_name' => $kategoria->slug,
+        'posts_per_page' => $selected_posts_number2 // Ustawia liczbę wyświetlanych postów na wybraną przez użytkownika
+    );
+
+    $posts = new WP_Query($args2);
+    if ($posts->have_posts()) {
+        while ($posts->have_posts()) {
+            $posts->the_post();
+            ?>
+        <div class="blog-card">
+            <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('small_size'); ?>
+            <?php endif; ?>
+
+            <div class="blog-card-content">
+                <p class="blog-card-date"><?php echo get_the_date('d/m/Y'); ?></p>
+                <a href="<?php the_permalink() ?>">
+                    <div class="blog-card-title"><?php echo wp_trim_words(get_the_title(), 5); ?></div>
+                </a>
+                <div class="blog-card-text"><?php echo wp_trim_words(get_the_content(), 25); ?></div>
+            </div>
+        </div>
+        <?php
+        }
+    }
+} else if ($selected_category == 'none') {
+    // Nie wyświetlaj żadnych wpisów
+}
+        ?>
+    </div>
 
 
+
+
+
+</section>
+
+
+<section class="blog-section container">
+    <?php
+$selected_category = get_theme_mod('mytheme_new_option_fourth');
+
+if ($selected_category != '' && $selected_category != 'none') {
+    $kategoria = get_category($selected_category);
+    $saved_text2 = get_theme_mod('mytheme_new_option_fourth2', '');
+
+    if (!empty($saved_text2)) {
+        ?>
+    <h2 class="category-header">
+        <?php echo esc_html($saved_text2); ?>
+    </h2>
+    <?php
+    }
+}
+?>
+    <div class="blog-container">
+        <?php
+
+$selected_category = get_theme_mod('mytheme_new_option_fourth');
+$selected_posts_number2 = get_theme_mod('mytheme_new_option_fourth3');
+
+if ($selected_category != '' && $selected_category != 'none') {
+    // Wyświetl wpisy tylko dla wybranej kategorii
+    $kategoria = get_category($selected_category);
+    $args2 = array(
+        'post_type' => 'post',
+        'category_name' => $kategoria->slug,
+        'posts_per_page' => $selected_posts_number2 // Ustawia liczbę wyświetlanych postów na wybraną przez użytkownika
+    );
+
+    $posts = new WP_Query($args2);
+    if ($posts->have_posts()) {
+        while ($posts->have_posts()) {
+            $posts->the_post();
+            ?>
+        <div class="blog-card">
+            <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('small_size'); ?>
+            <?php endif; ?>
+
+            <div class="blog-card-content">
+                <p class="blog-card-date"><?php echo get_the_date('d/m/Y'); ?></p>
+                <a href="<?php the_permalink() ?>">
+                    <div class="blog-card-title"><?php echo wp_trim_words(get_the_title(), 5); ?></div>
+                </a>
+                <div class="blog-card-text"><?php echo wp_trim_words(get_the_content(), 25); ?></div>
+            </div>
+        </div>
+        <?php
+        }
+    }
+} else if ($selected_category == 'none') {
+    // Nie wyświetlaj żadnych wpisów
+}
+        ?>
+    </div>
+</section>
+
+
+<section class="blog-section container">
+    <?php
+$selected_category = get_theme_mod('mytheme_new_option_fifth');
+
+if ($selected_category != '' && $selected_category != 'none') {
+    $kategoria = get_category($selected_category);
+    $saved_text2 = get_theme_mod('mytheme_new_option_fifth2', '');
+
+    if (!empty($saved_text2)) {
+        ?>
+    <h2 class="category-header">
+        <?php echo esc_html($saved_text2); ?>
+    </h2>
+    <?php
+    }
+}
+?>
+    <div class="blog-container">
+        <?php
+
+$selected_category = get_theme_mod('mytheme_new_option_fifth');
+$selected_posts_number2 = get_theme_mod('mytheme_new_option_fifth3');
+
+if ($selected_category != '' && $selected_category != 'none') {
+    // Wyświetl wpisy tylko dla wybranej kategorii
+    $kategoria = get_category($selected_category);
+    $args2 = array(
+        'post_type' => 'post',
+        'category_name' => $kategoria->slug,
+        'posts_per_page' => $selected_posts_number2 // Ustawia liczbę wyświetlanych postów na wybraną przez użytkownika
+    );
+
+    $posts = new WP_Query($args2);
+    if ($posts->have_posts()) {
+        while ($posts->have_posts()) {
+            $posts->the_post();
+            ?>
+        <div class="blog-card">
+            <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('small_size'); ?>
+            <?php endif; ?>
+
+            <div class="blog-card-content">
+                <p class="blog-card-date"><?php echo get_the_date('d/m/Y'); ?></p>
+                <a href="<?php the_permalink() ?>">
+                    <div class="blog-card-title"><?php echo wp_trim_words(get_the_title(), 5); ?></div>
+                </a>
+                <div class="blog-card-text"><?php echo wp_trim_words(get_the_content(), 25); ?></div>
+            </div>
+        </div>
+        <?php
+        }
+    }
+} else if ($selected_category == 'none') {
+    // Nie wyświetlaj żadnych wpisów
+}
+        ?>
+    </div>
+</section>
 
 
 
