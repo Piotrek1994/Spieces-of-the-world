@@ -613,6 +613,6 @@ function mytheme_mail_and_phone_register( $wp_customize ) {
  /// HEADER IMAGE SIZE 
  
  function mytheme_custom_header_image_size() {
-    add_image_size( 'small-header', 300, 100, true ); // 300px szerokości, 100px wysokości, true oznacza "crop"
+    add_image_size( 'small-header', 300, 100); // 300px szerokości, 100px wysokości, true oznacza "crop"
 }
 add_action( 'after_setup_theme', 'mytheme_custom_header_image_size' );
