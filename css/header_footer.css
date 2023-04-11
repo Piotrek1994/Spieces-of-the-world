@@ -82,14 +82,15 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu li a {
     margin: 0;
   }
-  .menu > li:first-child  a {
-    background-color: red;
+  .menu > li:first-child a {
     margin-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
+
   .menu-main-menu-container {
     display: block;
     position: absolute;
