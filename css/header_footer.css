@@ -62,6 +62,7 @@ body {
 .menu li a {
   text-decoration: none;
   margin-left: 3rem;
+  padding: 1.5rem 0rem 1.5rem 0rem;
   color: var(--black);
   text-transform: Uppercase;
   font-weight: 600;
@@ -96,7 +97,7 @@ body {
   }
 
   .nav-menu li {
-    margin-top: 1rem;
+  
     text-align: center;
   }
 
@@ -105,7 +106,6 @@ body {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 1rem;
     width: 90%;
     height: 1px;
     background-color: rgba(46, 35, 35, 0.05);
@@ -210,7 +210,7 @@ body {
     position: absolute;
     cursor: pointer;
     right: 2.3rem;
-    top: -0.3rem;
+    top: 1.3rem;
     transition: transform 0.3s ease;
   }
   .sub-menu-button * {
@@ -467,14 +467,20 @@ justify-content: space-around;
 .footer-widgets {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   flex-wrap: wrap;
 }
 
 .footer-widget-area {
   flex: 1;
+  padding: 1rem;
 
   min-width: 300px; /* Opcjonalne: minimalna szerokość obszaru widgetu */
+}
+
+.footer-widget-area h2 {
+  font-size: 1.5em;
+   font-weight: bolder;
 }
 
 .wp-block-search__inside-wrapper button {
