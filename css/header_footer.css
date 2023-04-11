@@ -86,6 +86,10 @@ body {
   .menu li a {
     margin: 0;
   }
+  .menu > li:first-child  a {
+    background-color: red;
+    margin-top: 2rem;
+  }
   .menu-main-menu-container {
     display: block;
     position: absolute;

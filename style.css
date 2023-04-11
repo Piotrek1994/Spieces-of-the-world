@@ -803,7 +803,7 @@ textarea {
   .menu .menu-item .sub-menu.toggle {
     display: block;
     text-align: center;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     background-color: rgb(196, 196, 196, 0.1);
   }
   .menu .menu-item .sub-menu.toggle li a {
@@ -814,6 +814,9 @@ textarea {
     width: 70%;
   }
 
+
+
+/* 
   .menu .menu-item .sub-menu.toggle li:first-child::before {
     content: "";
     display: block;
@@ -825,6 +828,8 @@ textarea {
     background-color: rgba(0, 0, 0, 0.05);
   }
 }
+*/
+
 
 @media screen and (max-width: 767px) {
   .main-navigation ul li:hover > ul,
@@ -1131,4 +1136,4 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
-}
+}}
