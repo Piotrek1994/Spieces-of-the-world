@@ -69,10 +69,21 @@
 
                 <?php if ( get_header_image() ) : ?>
                 <div id="site-header">
+
+
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img class="header-logo" src="<?php header_image(); ?>"
+                        <?php
+                        $header_image_id = attachment_url_to_postid( get_header_image() );
+                        $small_header_image = wp_get_attachment_image_src( $header_image_id, 'small-header' );
+                        if ( $small_header_image ) :
+                         ?>
+                        <img class="header-logo" src="<?php echo esc_url( $small_header_image[0] ); ?>"
                             alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                        <?php endif; ?>
                     </a>
+
+
+
                 </div>
                 <?php endif; ?>
 
