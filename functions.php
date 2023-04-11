@@ -193,7 +193,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_filter('show_admin_bar', '__return_false');
+
 
 function get_breadcrumb() {
 
@@ -218,21 +218,9 @@ function get_breadcrumb() {
 }
 
 
-function cwpai_create_post_type() {
-    register_post_type('herbaty', array(
-		'public' => true,
-		'show_in_rest' => true,
-		'labels' => array(
-		  'name' => 'Herbaty',
-		  'add_new_item' => 'Add New herbaty',
-		  'edit_item' => 'Edit herbaty',
-		  'all_items' => 'All herbaty',
-		  'singular_name' => 'herbaty'
-		),
-		'menu_icon' => 'dashicons-calendar'
-	  ));
-}
-add_action('init', 'cwpai_create_post_type');
+
+
+
 
 function my_menu(){
 	register_nav_menu('headerMenuLocation', 'Header Menu Location');
@@ -382,7 +370,7 @@ function mytheme_customize_register2($wp_customize2) {
 
     // Dodaj drugą sekcję
     $wp_customize2->add_section('mytheme_new_section_second', array(
-        'title'       => __('Wprowadź tekst', 'mytheme2'),
+        'title'       => __('Wpisy na stronie głównej dwa', 'mytheme2'),
         'priority'    => 30,
     ));
 
@@ -458,6 +446,9 @@ function mytheme_get_categories_choices2() {
 
 
 
+/////////////////////////////////
+
+
 function mytheme_phone_number( $wp_customize_phone ) {
     $wp_customize_phone->add_section( 'mytheme_contact' , array(
         'title'      => __( 'Dane kontaktowe', 'mytheme' ),
@@ -531,7 +522,9 @@ add_action('widgets_init', 'my_theme_widgets_init');
 
 // PAGINATION RULE
 
-add_rewrite_rule('^blog/([^/]*)/([^/]*)/page/([0-9]+)/?', 'index.php?category_name=$matches[1]&name=$matches[2]&paged=$matches[3]', 'top');
+
+
+
 
 
 // Mail and phone 

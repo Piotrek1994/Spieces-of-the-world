@@ -226,6 +226,17 @@ aside {
 	grid-row: 2 / 3;
 }
 
+@media  screen and (max-width: 992px) {
+  aside {
+    grid-column: 1/-1;
+	grid-row: 3 / 4;
+  }
+  .post-content {
+    grid-column: 1/-1;
+  }
+}
+
+
 .breadcrumb {
 	color: var(--black);
 	font-weight: 400;

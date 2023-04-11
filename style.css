@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Piotr
 Author URI: http://underscores.me/
 Description: A page dedicated to spices, an online store offering a wide selection of high-quality spices from various parts of the world. Our range includes both classic and lesser-known spices, allowing you to explore and experiment with different flavors in your cooking. Whether you\'re looking for sweet, savory, or spicy, our collection has something for everyone. With our easy-to-use website, you can browse and purchase your favorite spices with just a few clicks. Discover the world of spices and enhance your culinary creations with our premium selection.
-Version: 1.0.4
+Version: 1.0.8
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -72,7 +72,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
    License: none (public domain)
 */
 
-
 :root {
   --light-pink: #f7f0e6;
   --light-gray: #808080;
@@ -87,55 +86,130 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin: 0px auto 0px auto;
 }
 
-
-
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
-
-
 
 html {
   line-height: 1.15;
@@ -488,8 +562,6 @@ h6 {
   clear: both;
 }
 
-
-
 dfn,
 cite,
 em,
@@ -551,7 +623,6 @@ hr {
   margin-bottom: 1.5em;
 }
 
-
 ul {
   list-style: disc;
 }
@@ -580,8 +651,6 @@ iframe,
 object {
   max-width: 100%;
 }
-
-
 
 figure {
   margin: 1em 0;
@@ -612,11 +681,8 @@ a:focus {
   outline: thin dotted;
 }
 
-
-
 /* Forms
 --------------------------------------------- */
-
 
 button:hover,
 input[type="button"]:hover,
@@ -651,8 +717,6 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -671,8 +735,6 @@ input[type="color"]:focus,
 textarea:focus {
   color: #111;
 }
-
-
 
 textarea {
   width: 100%;
@@ -740,23 +802,20 @@ textarea {
   }
   .menu .menu-item .sub-menu.toggle {
     display: block;
-   text-align: center;
-   margin-top: 1rem;
-   background-color: rgb(196, 196, 196, 0.1);
+    text-align: center;
+    margin-top: 1rem;
+    background-color: rgb(196, 196, 196, 0.1);
   }
-  .menu .menu-item .sub-menu.toggle li a{
+  .menu .menu-item .sub-menu.toggle li a {
     margin-right: auto;
     margin-left: auto;
-
   }
   .menu .menu-item .sub-menu.toggle li::after {
     width: 70%;
-  
-
   }
 
   .menu .menu-item .sub-menu.toggle li:first-child::before {
-    content: '';
+    content: "";
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -765,11 +824,7 @@ textarea {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.05);
   }
-  
 }
-
-
-
 
 @media screen and (max-width: 767px) {
   .main-navigation ul li:hover > ul,
@@ -779,11 +834,8 @@ textarea {
   }
   .main-navigation ul ul {
     left: unset;
-    
   }
 }
-
-
 
 @media screen and (min-width: 768px) {
   .main-navigation ul li:hover > ul,
@@ -794,20 +846,17 @@ textarea {
     background-color: var(--white);
 
     width: 140%;
-    
   }
-   .sub-menu li {
+  .sub-menu li {
     margin-bottom: 1rem;
-    
   }
-  .sub-menu li:first-child{
+  .sub-menu li:first-child {
     margin-top: 1rem;
   }
   .main-navigation ul li:hover > ul a,
   .main-navigation ul li.focus > ul a {
     font-weight: 400;
   }
-
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -833,9 +882,6 @@ textarea {
 }
 
 /* Small menu. */
-
-
-
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
