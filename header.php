@@ -72,8 +72,17 @@
 
 
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img class="header-logo" src="<?php header_image(); ?>"
-                            alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+
+
+                        <?php
+$custom_image_id = get_theme_mod( 'mytheme_custom_image_setting' );
+if ( $custom_image_id ) {
+    $custom_image_src = wp_get_attachment_image_src( $custom_image_id, 'logo_size' );
+    $custom_image_url = $custom_image_src[0];
+    echo '<img class="header-logo" src="' . esc_url( $custom_image_url ) . '" alt="' . esc_attr__( 'Custom Image', 'mytheme' ) . '" width="' . esc_attr( $custom_image_src[1] ) . '" height="' . esc_attr( $custom_image_src[2] ) . '">';
+}
+?>
+
                     </a>
 
 

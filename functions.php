@@ -45,6 +45,7 @@ function spieces_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
+    add_image_size('logo_size', 100, 100);
 	add_image_size('small_size', 300, 260);
     add_image_size('medium_size', 455, 450);
     add_image_size('larg_size', 650, 650);
@@ -612,7 +613,27 @@ function mytheme_mail_and_phone_register( $wp_customize ) {
  
  /// HEADER IMAGE SIZE 
  
- function mytheme_custom_header_image_size() {
-    add_image_size( 'small-header', 300, 100); // 300px szerokości, 100px wysokości, true oznacza "crop"
+ function header_customize_register( $wp_customize ) {
+    // Dodaj sekcję 'mytheme_custom_image'
+    $wp_customize->add_section( 'mytheme_custom_image', array(
+        'title'          => __( 'Wstaw zdjęcie', 'mytheme' ),
+        'description'    => __( 'Wybierz zdjęcie, które chcesz wstawić na stronę.', 'mytheme' ),
+        'priority'       => 160,
+        'capability'     => 'edit_theme_options',
+    ) );
+
+    // Dodaj ustawienie 'mytheme_custom_image_setting'
+    $wp_customize->add_setting( 'mytheme_custom_image_setting', array(
+        'default'           => '',
+        'sanitize_callback' => 'absint',
+    ) );
+
+    // Dodaj kontrolkę dla ustawienia 'mytheme_custom_image_setting'
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'mytheme_custom_image_setting', array(
+        'label'       => __( 'Wybierz zdjęcie', 'mytheme' ),
+        'section'     => 'mytheme_custom_image',
+        'settings'    => 'mytheme_custom_image_setting',
+        'mime_type'   => 'image',
+    ) ) );
 }
-add_action( 'after_setup_theme', 'mytheme_custom_header_image_size' );
+add_action( 'customize_register', 'header_customize_register' );
